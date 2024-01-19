@@ -6,8 +6,8 @@ function App() {
     const [count, setCount] = useState(0);
 
     return (
-        <div className="flex flex-row h-full">
-            <header className=" flex justify-center w-2/3">
+        <div className="flex flex-row justify-around h-full">
+            <header className=" flex justify-center w-1/2">
                 <div className="fixed top-52">
                     <h1 className="flex text-6xl text-white whitespace-nowrap">
                         Hi, I'm Adam Johnson
@@ -36,18 +36,21 @@ function App() {
                     </p>
                     </div>
                     <div>
-                      
+
                     </div>
                 </div>
             </header>
-            <main className="flex flex-col h-[8000px]">
-                <div className="border-[20px] m-10 mt-32 mr-56 border-black rounded-lg">
-                    <img className="w-[500px]" src={Profile} />
+            <main className="flex flex-col w-1/2 h-[8000px]">
+              <div className="flex justify-center">
+
+                <div className="flex justify-center border-[15px] w-[560px] mt-36 border-black rounded-xl">
+                    <img className="" src={Profile} />
                 </div>
-                <div className="flex h-2/3">
+              </div>
+                <div className="flex justify-center h-2/3">
                     <button
                         onClick={() => setCount((count) => count + 1)}
-                        className="flex btn btn-info w-80 rounded-full"
+                        className="flex btn btn-info w-80 m-6 rounded-full"
                     >
                         count is {count}
                     </button>
