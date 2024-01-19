@@ -4,6 +4,8 @@
 // if the string is longer than 5 words then the function should reverse the order of the word
 // words will be separated by spaces. If no spaces then no subsequent word
 
+
+
 const spinWords = (str) => {
     const splitStr = str.split(' ')
     for (let i = 0; i < splitStr.length; i++) {
@@ -24,3 +26,4 @@ const spinWords = (str) => {
 
 spinWords('my name is missy')
 spinWords('its fun to solve cool problems like this')
+spinWords('trying to create svgs really sucks')
