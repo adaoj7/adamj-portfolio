@@ -27,3 +27,4 @@ const spinWords = (str) => {
 spinWords('my name is missy')
 spinWords('its fun to solve cool problems like this')
 spinWords('trying to create svgs really sucks')
+spinWords('Hello my name is caleb and I am silly')

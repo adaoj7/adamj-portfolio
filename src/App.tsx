@@ -5,6 +5,7 @@ import Profile from "./assets/Edited Headshot.jpeg";
 function App() {
     const [count, setCount] = useState(0);
 
+
     return (
         <div className="flex flex-row justify-around h-full">
             <header className=" flex justify-center w-1/2">
@@ -43,13 +44,13 @@ function App() {
             <main className="flex flex-col w-1/2 h-[8000px]">
               <div className="flex justify-center">
 
-                <div className="flex justify-center border-[15px] w-[560px] mt-36 border-black rounded-xl">
+                <div className="flex justify-center border-[15px] w-[650px] mt-20 border-black rounded-xl">
                     <img className="" src={Profile} />
                 </div>
               </div>
                 <div className="flex justify-center h-2/3">
                     <button
-                        onClick={() => setCount((count) => count + 1)}
+                        onClick={() => setCount((count) => count + 2)}
                         className="flex btn btn-info w-80 m-6 rounded-full"
                     >
                         count is {count}

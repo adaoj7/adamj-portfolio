@@ -16,22 +16,16 @@ const solution = (num) => {
         // if number % 5 === 0 add number to sum
         if (i % 3 === 0 && i % 5 === 0) {
             sum += i
-            console.log(i)
-            console.log(sum)
         }
         else if (i % 3 === 0) {
             sum += i
-            console.log(i)
-            console.log(sum)
         }
         else if (i % 5 === 0) {  
             sum += i
-            console.log(i)
-            console.log(sum)
         }
     }
     console.log(sum)
     return sum
 }
 
-solution(20)
+solution(435453)
