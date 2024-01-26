@@ -12,6 +12,7 @@ const pigIt = (str) => {
     let pigString = str.split(' ')
     // console.log(pigString)
     for (let i = 0; i < pigString.length; i++) {
+        if (/^[A-Za-z]+$/.test(pigString[i])) {
         let pigWord = pigString[i].split('')
         const firstLetter = pigWord.shift()
          if (pigWord)
@@ -20,10 +21,12 @@ const pigIt = (str) => {
         pigWord.push('y')
         pigWord = pigWord.join('')
         pigString[i] = pigWord
-        
+        }
     }
+
     pigString = pigString.join(' ')
     console.log(pigString)
+    return pigString
 }
 
-pigIt('hello my name is adam')
+pigIt('hello my name is adam !')
