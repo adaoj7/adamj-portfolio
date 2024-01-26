@@ -15,21 +15,40 @@
 
 // if number is less than 1000 then it won't need an M but it might need a CM
 // if number is less than 100 it won't need D or M
+// the longest possible string is MMMDCCCLXXXVIII
+// V, L, and D only appear a maximum of one time
+// I, X, L, C, and M all appear a maximum of 3 times
+// I, II, III, IV, V, VI, VII, VIII, IX, XI, XII, XIII, XIV, XV, XVII, XVIII, XIX
 
 const romanNumerals = (num) => {
-    
-    let numLength = num.toString().length
-    let numArr = num.toString().split('')
-    console.log(numArr)
-    if (numLength === 4) {
+    const romanMap =  [{ value: 1000, symbol: 'M' },
+    { value: 900, symbol: 'CM' },
+    { value: 500, symbol: 'D' },
+    { value: 400, symbol: 'CD' },
+    { value: 100, symbol: 'C' },
+    { value: 90, symbol: 'XC' },
+    { value: 50, symbol: 'L' },
+    { value: 40, symbol: 'XL' },
+    { value: 10, symbol: 'X' },
+    { value: 9, symbol: 'IX' },
+    { value: 5, symbol: 'V' },
+    { value: 4, symbol: 'IV' },
+    { value: 1, symbol: 'I' }]
+    let romanString = ''
 
-    } else if (numLength === 3) {
-
-    } else if (numLength === 2) {
-
-    } else if (numLength === 1) {
-        
-    }
+    for (let i = 0; i < romanMap.length; i++){
+        // checks how many times map number fits into the number
+        let count = 0
+         if ((num / romanMap[i].value) >= 1){
+            count = Math.floor(num/romanMap[i].value)
+            for (let j = 0; j < count; j++) {
+                romanString += romanMap[i].symbol
+            }
+            num -= romanMap[i].value * count
+        }
+        }
+    console.log(romanString)
+    return romanString
 }
 
-romanNumerals(399)
+romanNumerals(1000)
