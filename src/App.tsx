@@ -16,8 +16,8 @@ function App() {
                 </section>
             </header>
             <main className="h-[2000px]">
-                <section className="flex flex-row justify-evenly h-1/4 mt-20">
-                <section className="flex items-center justify-start ">
+                <section className="flex flex-row justify-evenly h-1/4 mt-20 ">
+                <section className="flex items-center justify-start ml-20">
                         <div>
                             <div className="border-[15px] w-[350px] border-black rounded-xl">
                                 <img className="" src={Profile} />
@@ -35,8 +35,8 @@ function App() {
                             </div>
                         </div>
                     </section>
-                    <div className="flex w-1/3 justify-center items-center">
-                        <div className=" text-lg">
+                    <div className="flex w-1/3 justify-center items-center ">
+                        <div className=" text-lg mr-32">
                             <h2 className="text-white text-4xl font-Playfair mb-6">
                                 Hi, I'm Adam
                             </h2>
