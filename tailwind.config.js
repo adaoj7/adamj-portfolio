@@ -2,6 +2,16 @@
 
 /** @type {import('tailwindcss').Config} */
 export default {
+    theme: {
+        // Some useful comment
+        fontFamily: {
+          'Roboto': ['"Roboto Slab"', 'serif'],
+          'OpenSans': ['"Open Sans"', 'sans-serif'],
+          'Playfair': ['"Playfair Display"', 'serif'],
+          'Montserrat': ['"Montserrat"', 'sans-serif'],
+
+        },
+      },
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     plugins: [require("daisyui")],
     daisyui: {
