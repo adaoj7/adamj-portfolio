@@ -8,11 +8,12 @@ import MailIcon from "./assets/Mail.svg"
 function App() {
     return (
         <div className="flex flex-col h-full font-OpenSans">
-            <header className="flex justify-evenly text-white h-20">
+            <header className="flex justify-around text-white h-24 bg-primary-content">
                 <section className="flex flex-col justify-center ">
                     <p className="font-bold">Adam Johnson</p>
                     <p className="text-sm">React Web Developer</p>
                 </section>
+                {/* Move modal button to bottom corner on scroll */}
                 <section className="flex flex-row justify-center items-center">
                     <button
                         className="hover:text-gray-400"
@@ -55,7 +56,7 @@ function App() {
                 </section>
             </header>
             <main className="h-[2000px]">
-                <section className="flex flex-row justify-start h-1/4 mt-6">
+                <section className="flex flex-row justify-start h-1/4 bg-primary-content">
                     <section className="flex items-center justify-start ml-52">
                         <div>
                             <div className="border-[15px] w-[350px] border-black rounded-xl shadow-2xl">
@@ -69,10 +70,8 @@ function App() {
                                 Hi, I'm Adam
                             </h2>
                             <p className="text-white">
-                                I found my love for tech after already finishing
-                                my Bachelor's degree in Public Policy and
-                                Administration. One day, the semester before I
-                                graduated while talking with my wife, a feeling
+                                One day, the semester before I
+                                graduated from college, while talking with my wife, a feeling
                                 hit me really strongly.{" "}
                                 <span className="font-bold text-info">
                                     "I should learn to code."{" "}
@@ -109,7 +108,7 @@ function App() {
                             </p>
                             <div className="card-actions justify-end flex flex-row">
                                 <button
-                                    className="btn btn-info hover:btn-ghost text-base"
+                                    className="btn btn-primary hover:btn-ghost text-base"
                                     onClick={() =>
                                         (window.location.href =
                                             "https://adaoj.dev")
@@ -139,7 +138,7 @@ function App() {
                             </p>
                             <div className="card-actions justify-end flex flex-row">
                                 <button
-                                    className="btn btn-info hover:btn-ghost text-base"
+                                    className="btn btn-primary hover:btn-ghost text-base"
                                     onClick={() =>
                                         (window.location.href =
                                             "https://adaoj.dev")
