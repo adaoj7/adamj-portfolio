@@ -4,6 +4,8 @@ import Github from "./assets/github-mark-white.png";
 import LinkedIn from "./assets/In-White-128.png";
 import NatsiteHero from "./assets/Natsite.png";
 import MailIcon from "./assets/Mail.svg"
+import AmaviHero from './assets/AmaviChorale.png'
+import MovieHero from './assets/Movie Lookup.png'
 
 function App() {
     return (
@@ -36,12 +38,12 @@ function App() {
                                     }
                                     className="flex items-center hover:text-gray-300"
                                 >
-                                    <img src={MailIcon} className="h-10 mx-5 fill-white" />
+                                    <img src={MailIcon} className="h-10 mx-5 fill-white" title='Will Open Your Default Email Client'/>
                                 </button>
-                                <a href="https://www.linkedin.com/in/adamj7/">
+                                <a href="https://www.linkedin.com/in/adamj7/" title="Link to My LinkedIn">
                                     <img src={LinkedIn} className="h-10 mx-5" />
                                 </a>
-                                <a href="https://github.com/adaoj7">
+                                <a href="https://github.com/adaoj7" title="Link to My GitHub">
                                     <img src={Github} className="h-10 mx-5" />
                                 </a>
                             </div>
@@ -59,14 +61,14 @@ function App() {
                 <section className="flex flex-row justify-start h-1/4 bg-primary-content">
                     <section className="flex items-center justify-start ml-52">
                         <div>
-                            <div className="border-[15px] w-[350px] border-black rounded-xl shadow-2xl">
+                            <div className="border-[15px] w-[350px] border-black rounded-2xl shadow-2xl">
                                 <img className="" src={Profile} />
                             </div>
                         </div>
                     </section>
-                    <div className="flex w-full p-20 justify-center items-center ">
+                    <div className="flex w-full p-20 justify-center items-center mt-10">
                         <div className=" text-lg pr-20">
-                            <h2 className="text-white text-4xl font-Playfair mb-6">
+                            <h2 className="text-white text-4xl font-Playfair font-semibold mb-6">
                                 Hi, I'm Adam
                             </h2>
                             <p className="text-white">
@@ -95,8 +97,8 @@ function App() {
                     </div>
                 </section>
                 <section className="flex justify-center flex-col items-center mt-4">
-                    <h2 className="mb-10 text-3xl">My Projects</h2>
-                    <div className="card card-side w-2/3 bg-base-300 shadow-xl my-10">
+                    <h2 className="mb-10 text-4xl font-Playfair font-semibold">My Projects</h2>
+                    <div className="card card-side w-2/3 bg-base-300 shadow-xl mt-10 mb-4">
                         {/* I need to take the screenshot from my large monitor */}
                         <figure className="w-2/3">
                             <img src={NatsiteHero} alt="Natsite Hero" />
@@ -116,7 +118,7 @@ function App() {
                                 >
                                     Hosted Site
                                 </button>
-                                <a href="https://github.com/adaoj7/nativity_site">
+                                <a href="https://github.com/adaoj7/nativity_site" title='GitHub Repo'>
                                     <img
                                         src={Github}
                                         alt="Github Logo"
@@ -126,27 +128,39 @@ function App() {
                             </div>
                         </div>
                     </div>
-                    <div className="card card-side w-2/3 bg-base-300 shadow-xl">
-                        {/* I need to take the screenshot from my large monitor */}
+                    <div className="card card-side w-2/3 bg-base-300 shadow-xl my-4">
                         <figure className="w-2/3">
-                            <img src={NatsiteHero} alt="Natsite Hero" />
+                            <img src={AmaviHero} alt="Amavi Hero" />
                         </figure>
                         <div className="card-body">
-                            <h2 className="card-title">Nativity Site</h2>
+                            <h2 className="card-title">Amavi Chorale Site</h2>
                             <p>
                                 If a dog chews shoes whose shoes does he choose?
                             </p>
                             <div className="card-actions justify-end flex flex-row">
-                                <button
-                                    className="btn btn-primary hover:btn-ghost text-base"
-                                    onClick={() =>
-                                        (window.location.href =
-                                            "https://adaoj.dev")
-                                    }
-                                >
-                                    Hosted Site
-                                </button>
-                                <a href="https://github.com/adaoj7/nativity_site">
+                                
+                                <a href="https://github.com/adaoj7/nativity_site" title='GitHub Repo'>
+                                    <img
+                                        src={Github}
+                                        alt="Github Logo"
+                                        className="h-12"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="card card-side w-2/3 bg-base-300 shadow-xl my-4">
+                        <figure className="w-2/3">
+                            <img src={MovieHero} alt="Movie Hero" />
+                        </figure>
+                        <div className="card-body">
+                            <h2 className="card-title">Movie Lookup w/ Vue</h2>
+                            <p>
+                                If a dog chews shoes whose shoes does he choose?
+                            </p>
+                            <div className="card-actions justify-end flex flex-row">
+                                
+                                <a href="https://github.com/adaoj7/nativity_site" title='GitHub Repo'>
                                     <img
                                         src={Github}
                                         alt="Github Logo"
