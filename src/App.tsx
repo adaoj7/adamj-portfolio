@@ -65,7 +65,7 @@ function App() {
             </header>
             <main className="overflow-x-hidden">
                 <section className="flex flex-row justify-start h-screen bg-primary-content">
-                    <section className="flex items-center justify-start ml-52">
+                    <section className="flex items-center justify-start ml-44">
                         <div>
                             <div className=" w-[450px]">
                                 <img className="rounded-ss-[75px] rounded-se-[75px] rounded-es-[75px] rounded-ee-[75px]" src={Profile} />
