@@ -229,22 +229,20 @@ function App() {
 
             {/* Desktop */}
             <div className="hidden lg:flex flex-col h-full font-OpenSans">
-                <header className="relative">
+                <header className="">
                     {/* Move modal button to bottom corner on scroll */}
                     <section className="fixed bottom-12 right-12">
                         <button
                             className="btn btn-info hover:btn-ghost shadow-xl"
-                            onClick={() =>
-                                // @ts-ignore
-                                document
-                                    .getElementById("my_modal_1")
-                                    // @ts-ignore
-                                    .showModal()
-                            }
+                            onClick={() => {
+                                if (document) {
+                                  (document.getElementById('my_modal_2') as HTMLFormElement).showModal();
+                                }
+                            }}
                         >
                             Click Me!
                         </button>
-                        <dialog id="my_modal_1" className="modal">
+                        <dialog id="my_modal_2" className="lg:modal">
                             <div className="modal-box">
                                 <h3 className="font-bold text-xl">
                                     Gotcha! Now you have to reach out. I don't

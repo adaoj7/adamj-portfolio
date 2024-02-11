@@ -1714,6 +1714,59 @@ html {
   background-color: var(--fallback-bc,oklch(var(--bc)/0.2));
 }
 
+@media (min-width: 1024px) {
+  .lg\:modal {
+    pointer-events: none;
+    position: fixed;
+    inset: 0px;
+    margin: 0px;
+    display: grid;
+    height: 100%;
+    max-height: none;
+    width: 100%;
+    max-width: none;
+    justify-items: center;
+    padding: 0px;
+    opacity: 0;
+    overscroll-behavior: contain;
+    z-index: 999;
+    background-color: transparent;
+    color: inherit;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-property: transform, opacity, visibility;
+    overflow-y: hidden;
+  }
+
+  :where(.lg\:modal) {
+    align-items: center;
+  }
+
+  .lg\:modal:target,
+.modal-toggle:checked + .lg\:modal,.lg\:modal[open] {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  :root:has(:is(.modal-open,.lg\:modal:target, .modal-toggle:checked + .lg\:modal,.lg\:modal[open])) {
+    overflow: hidden;
+  }
+
+  .lg\:modal:not(dialog:not(.modal-open)),.lg\:modal::backdrop {
+    background-color: #0006;
+    animation: modal-pop 0.2s ease-out;
+  }
+
+  
+.modal-toggle:checked + .lg\:modal .modal-box,.lg\:modal:target .modal-box,.lg\:modal[open] .modal-box {
+    --tw-translate-y: 0px;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
 .hover\:text-gray-300:hover {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
