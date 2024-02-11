@@ -18,7 +18,7 @@ function App() {
                 <main className="overflow-y-hidden">
                     <section className="flex flex-col justify-around h-screen bg-primary-content">
                         <section className="flex items-center justify-center h-[40%]">
-                            <div className="w-[70%]">
+                            <div className="w-[60%]">
                                 <img
                                     className="rounded-ss-[25px] rounded-se-[25px] rounded-es-[25px] rounded-ee-[25px]"
                                     src={Profile}

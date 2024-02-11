@@ -1499,8 +1499,8 @@ html {
   width: 450px;
 }
 
-.w-\[70\%\] {
-  width: 70%;
+.w-\[60\%\] {
+  width: 60%;
 }
 
 .w-full {
@@ -1728,4 +1728,3 @@ html {
     display: none;
   }
 }
-
