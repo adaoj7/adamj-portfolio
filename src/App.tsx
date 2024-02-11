@@ -144,7 +144,7 @@ function App() {
                                         className="btn btn-primary hover:btn-ghost text-base"
                                         onClick={() =>
                                             (window.location.href =
-                                                "https://adaoj.dev")
+                                                "https://adamj-developer.com")
                                         }
                                     >
                                         Hosted Site
@@ -354,7 +354,7 @@ function App() {
                                         className="btn btn-primary hover:btn-ghost text-base"
                                         onClick={() =>
                                             (window.location.href =
-                                                "https://adaoj.dev")
+                                                "https://adamj-developer.com")
                                         }
                                     >
                                         Hosted Site
