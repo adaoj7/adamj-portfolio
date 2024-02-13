@@ -428,7 +428,7 @@ function App() {
             <div className="hidden lg:flex flex-col h-full font-OpenSans">
                 <header className="">
                     {/* Move modal button to bottom corner on scroll */}
-                    <section className="fixed bottom-12 right-12">
+                    <section className="fixed bottom-10 right-10">
                         <button
                             className="btn btn-info hover:btn-ghost shadow-xl"
                             onClick={() => {
@@ -539,7 +539,7 @@ function App() {
                         <h2 className="my-10 text-6xl font-Playfair text-white font-semibold">
                             My Projects
                         </h2>
-                        <div className="card card-side w-3/4 h-auto bg-base-300 shadow-xl mt-10 mb-4">
+                        <div className="card card-side w-4/5 h-auto bg-base-300 shadow-xl mt-10 mb-4">
                             {/* I need to take the screenshot from my large monitor */}
                             <figure className="w-3/4 h-full">
                                 <img src={NatsiteHero} alt="Natsite Hero" />
@@ -556,7 +556,7 @@ function App() {
                                     donations.
                                 </p>
 
-                                <div className="card-actions justify-end flex flex-row">
+                                <div className="card-actions justify-end flex flex-row flex-nowrap">
                                     <button
                                         className="btn btn-primary hover:btn-ghost"
                                         onClick={() => {
@@ -654,7 +654,7 @@ function App() {
                                 </div>
                             </div>
                         </div>
-                        <div className="card card-side w-3/4 h-auto bg-base-300 shadow-xl my-4">
+                        <div className="card card-side w-4/5 h-auto bg-base-300 shadow-xl my-4">
                             <figure className="w-3/4 h-full">
                                 <img src={AmaviHero} alt="Amavi Hero" />
                             </figure>
@@ -745,7 +745,7 @@ function App() {
                                 </div>
                             </div>
                         </div>
-                        <div className="card card-side w-3/4 h-auto bg-base-300 shadow-xl my-4">
+                        <div className="card card-side w-4/5 h-auto bg-base-300 shadow-xl my-4">
                             <figure className="w-3/4 h-full">
                                 <img src={MovieHero} alt="Movie Hero" />
                             </figure>

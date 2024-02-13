@@ -1455,12 +1455,12 @@ html {
   position: relative;
 }
 
-.bottom-12 {
-  bottom: 3rem;
+.bottom-10 {
+  bottom: 2.5rem;
 }
 
-.right-12 {
-  right: 3rem;
+.right-10 {
+  right: 2.5rem;
 }
 
 .m-3 {
@@ -1562,6 +1562,10 @@ html {
   width: 75%;
 }
 
+.w-4\/5 {
+  width: 80%;
+}
+
 .w-\[20px\] {
   width: 20px;
 }
@@ -1588,6 +1592,10 @@ html {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
 }
 
 .items-center {
