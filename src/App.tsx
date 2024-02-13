@@ -272,7 +272,7 @@ function App() {
                                             if (document) {
                                                 (
                                                     document.getElementById(
-                                                        "amaviModal"
+                                                        "amaviPhoneModal"
                                                     ) as HTMLFormElement
                                                 ).showModal();
                                             }
@@ -360,7 +360,7 @@ function App() {
                                             if (document) {
                                                 (
                                                     document.getElementById(
-                                                        "movieModal"
+                                                        "moviePhoneModal"
                                                     ) as HTMLFormElement
                                                 ).showModal();
                                             }
@@ -676,7 +676,7 @@ function App() {
                                             if (document) {
                                                 (
                                                     document.getElementById(
-                                                        "amaviModal"
+                                                        "amaviDesktopModal"
                                                     ) as HTMLFormElement
                                                 ).showModal();
                                             }
@@ -764,7 +764,7 @@ function App() {
                                             if (document) {
                                                 (
                                                     document.getElementById(
-                                                        "movieModal"
+                                                        "movieDesktopModal"
                                                     ) as HTMLFormElement
                                                 ).showModal();
                                             }
