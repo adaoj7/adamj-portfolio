@@ -6,7 +6,13 @@ import NatsiteHero from "./assets/Natsite.png";
 import MailIcon from "./assets/Mail.svg";
 import AmaviHero from "./assets/AmaviChorale.png";
 import MovieHero from "./assets/Movie Lookup.png";
-import { FaAws, FaExternalLinkAlt, FaNode, FaReact, FaVuejs } from "react-icons/fa";
+import {
+    FaAws,
+    FaExternalLinkAlt,
+    FaNode,
+    FaReact,
+    FaVuejs,
+} from "react-icons/fa";
 import { SiVite, SiExpress, SiCaddy, SiTailwindcss } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 
@@ -124,16 +130,15 @@ function App() {
                         </div>
                     </section>
                     <section className="flex justify-center flex-col items-center mt-4">
-                        <h2 className="my-10 text-6xl font-Playfair font-semibold">
+                        <h2 className="my-10 text-5xl font-Playfair text-white font-semibold">
                             My Projects
                         </h2>
-                        <div className="card w-2/3 bg-base-300 shadow-xl mt-10 mb-4">
+                        <div className="card w-3/4 bg-base-300 shadow-xl mt-10 mb-4">
                             {/* I need to take the screenshot from my large monitor */}
                             <figure className="h-full">
                                 <img
                                     src={NatsiteHero}
                                     alt="Natsite Hero"
-                                    className=""
                                 />
                             </figure>
                             <div className="card-body">
@@ -142,15 +147,87 @@ function App() {
                                 </h2>
                                 <p>
                                     This is a site rebuild of a static Wix site
-                                    for the Peoria Nativity Festival.
+                                    for the Peoria Nativity Festival. With
+                                    features such as login for volunteer shift
+                                    management and StripeAPI for secure
+                                    donations.
                                 </p>
-                                <p>
-                                    Tech stack: React, Node with Express, and
-                                    PostgreSQL hosted on an EC2 instance with
-                                    Caddy for the reverse proxy and https
-                                    certificate
-                                </p>
-                                <div className="card-actions justify-end flex flex-row">
+                                <div className="card-actions justify-between flex flex-row">
+                                
+                                <button
+                                        className="btn btn-primary hover:btn-ghost"
+                                        onClick={() => {
+                                            if (document) {
+                                                (
+                                                    document.getElementById(
+                                                        "natPhoneModal"
+                                                    ) as HTMLFormElement
+                                                ).showModal();
+                                            }
+                                        }}
+                                        title="Tech Stack Modal"
+                                    >
+                                        Tech Stack
+                                    </button>
+                                    <dialog id="natPhoneModal" className="modal">
+                                        <div className="modal-box flex flex-row flex-wrap justify-center">
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <FaReact size={70} />
+                                                <p className="badge badge-neutral">
+                                                    React
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <SiTailwindcss size={70} />
+                                                <p className="badge badge-neutral">
+                                                    TailwindCSS
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <FaNode size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Node.js
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <SiExpress size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Express
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <BiLogoPostgresql size={70} />
+                                                <p className="badge badge-neutral">
+                                                    PostgreSQL
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <SiVite size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Vite
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <FaAws size={70} />
+                                                <p className="badge badge-neutral">
+                                                    AWS EC2
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <SiCaddy size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Caddy
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <form
+                                            method="dialog"
+                                            className="modal-backdrop"
+                                        >
+                                            {/* if there is a button in form, it will close the modal */}
+                                            <button>close</button>
+                                        </form>
+                                    </dialog>
                                     <button
                                         className="btn btn-primary hover:btn-ghost text-base"
                                         onClick={() =>
@@ -173,7 +250,7 @@ function App() {
                                 </div>
                             </div>
                         </div>
-                        <div className="card w-2/3 bg-base-300 shadow-xl my-4">
+                        <div className="card w-3/4 bg-base-300 shadow-xl my-4">
                             <figure className="">
                                 <img src={AmaviHero} alt="Amavi Hero" />
                             </figure>
@@ -182,13 +259,78 @@ function App() {
                                     Amavi Chorale Site
                                 </h2>
                                 <p>
-                                    If a dog chews shoes whose shoes does he
-                                    choose?
+                                    This site enables
+                                    admins with comprehensive functionality for effective chorale management
+                                    including email list subscriptions, audition
+                                    management, event management, and donations
+                                    utilizing StripeAPI.
                                 </p>
                                 <div className="card-actions justify-end flex flex-row">
+                                <button
+                                        className="btn btn-primary hover:btn-ghost"
+                                        onClick={() => {
+                                            if (document) {
+                                                (
+                                                    document.getElementById(
+                                                        "amaviModal"
+                                                    ) as HTMLFormElement
+                                                ).showModal();
+                                            }
+                                        }}
+                                        title="Tech Stack Modal"
+                                    >
+                                        Tech Stack
+                                    </button>
+                                    <dialog id="amaviModal" className="modal">
+                                        <div className="modal-box flex flex-row flex-wrap justify-center">
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <FaReact size={70} />
+                                                <p className="badge badge-neutral">
+                                                    React
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <SiTailwindcss size={70} />
+                                                <p className="badge badge-neutral">
+                                                    TailwindCSS
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <FaNode size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Node.js
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <SiExpress size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Express
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <BiLogoPostgresql size={70} />
+                                                <p className="badge badge-neutral">
+                                                    PostgreSQL
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <SiVite size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Vite
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <form
+                                            method="dialog"
+                                            className="modal-backdrop"
+                                        >
+                                            {/* if there is a button in form, it will close the modal */}
+                                            <button>close</button>
+                                        </form>
+                                    </dialog>
                                     <a
-                                        href="https://github.com/adaoj7/nativity_site"
-                                        title="GitHub Repo"
+                                        href="https://github.com/crecendo-coders/amavi-dev"
+                                        title="Amavi Chorale Repo"
                                     >
                                         <img
                                             src={Github}
@@ -199,7 +341,7 @@ function App() {
                                 </div>
                             </div>
                         </div>
-                        <div className="card w-2/3 bg-base-300 shadow-xl my-4">
+                        <div className="card w-3/4 bg-base-300 shadow-xl my-4">
                             <figure className="">
                                 <img src={MovieHero} alt="Movie Hero" />
                             </figure>
@@ -208,10 +350,54 @@ function App() {
                                     Movie Lookup w/ Vue
                                 </h2>
                                 <p>
-                                    If a dog chews shoes whose shoes does he
-                                    choose?
+                                    Movie lookup using the Movie Database API to
+                                    display 10 movies based on what is searched.
                                 </p>
                                 <div className="card-actions justify-end flex flex-row">
+                                <button
+                                        className="btn btn-primary hover:btn-ghost"
+                                        onClick={() => {
+                                            if (document) {
+                                                (
+                                                    document.getElementById(
+                                                        "movieModal"
+                                                    ) as HTMLFormElement
+                                                ).showModal();
+                                            }
+                                        }}
+                                        title="Tech Stack Modal"
+                                    >
+                                        Tech Stack
+                                    </button>
+                                    <dialog id="movieModal" className="modal">
+                                        <div className="modal-box flex flex-row flex-wrap justify-center">
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <FaVuejs size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Vue
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <FaNode size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Node.js
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <SiVite size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Vite
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <form
+                                            method="dialog"
+                                            className="modal-backdrop"
+                                        >
+                                            {/* if there is a button in form, it will close the modal */}
+                                            <button>close</button>
+                                        </form>
+                                    </dialog>
                                     <a
                                         href="https://github.com/adaoj7/nativity_site"
                                         title="GitHub Repo"
@@ -359,7 +545,9 @@ function App() {
                                 <img src={NatsiteHero} alt="Natsite Hero" />
                             </figure>
                             <div className="card-body w-[20px]">
-                                <h2 className="card-title">Nativity Site</h2>
+                            <h2 className="card-title">
+                                    Peoria Nativity Festival Site
+                                </h2>
                                 <p>
                                     This is a site rebuild of a static Wix site
                                     for the Peoria Nativity Festival. With
@@ -375,7 +563,7 @@ function App() {
                                             if (document) {
                                                 (
                                                     document.getElementById(
-                                                        "natModal"
+                                                        "natDesktopModal"
                                                     ) as HTMLFormElement
                                                 ).showModal();
                                             }
@@ -384,7 +572,7 @@ function App() {
                                     >
                                         Tech Stack
                                     </button>
-                                    <dialog id="natModal" className="modal">
+                                    <dialog id="natDesktopModal" className="modal">
                                         <div className="modal-box flex flex-row flex-wrap justify-center">
                                             <div className="flex justify-center items-center flex-col m-3">
                                                 <FaReact size={70} />
@@ -417,7 +605,7 @@ function App() {
                                                 </p>
                                             </div>
                                             <div className="flex justify-center items-center flex-col m-3">
-                                                <SiVite size={70}/>
+                                                <SiVite size={70} />
                                                 <p className="badge badge-neutral">
                                                     Vite
                                                 </p>
@@ -435,12 +623,13 @@ function App() {
                                                 </p>
                                             </div>
                                         </div>
-                                        <form method="dialog" className="modal-backdrop">
-                                                {/* if there is a button in form, it will close the modal */}
-                                                <button>
-                                                    close
-                                                </button>
-                                            </form>
+                                        <form
+                                            method="dialog"
+                                            className="modal-backdrop"
+                                        >
+                                            {/* if there is a button in form, it will close the modal */}
+                                            <button>close</button>
+                                        </form>
                                     </dialog>
                                     <button
                                         className="btn btn-primary hover:btn-ghost text-base"
@@ -474,8 +663,11 @@ function App() {
                                     Amavi Chorale Site
                                 </h2>
                                 <p>
-                                    If a dog chews shoes whose shoes does he
-                                    choose?
+                                    This site enables
+                                    admins with comprehensive functionality for effective chorale management
+                                    including email list subscriptions, audition
+                                    management, event management, and donations
+                                    utilizing StripeAPI.
                                 </p>
                                 <div className="card-actions justify-end flex flex-row">
                                     <button
@@ -526,18 +718,19 @@ function App() {
                                                 </p>
                                             </div>
                                             <div className="flex justify-center items-center flex-col m-3">
-                                                <SiVite size={70}/>
+                                                <SiVite size={70} />
                                                 <p className="badge badge-neutral">
                                                     Vite
                                                 </p>
                                             </div>
                                         </div>
-                                            <form method="dialog" className="modal-backdrop">
-                                                {/* if there is a button in form, it will close the modal */}
-                                                <button>
-                                                    close
-                                                </button>
-                                            </form>
+                                        <form
+                                            method="dialog"
+                                            className="modal-backdrop"
+                                        >
+                                            {/* if there is a button in form, it will close the modal */}
+                                            <button>close</button>
+                                        </form>
                                     </dialog>
                                     <a
                                         href="https://github.com/crecendo-coders/amavi-dev"
@@ -595,18 +788,19 @@ function App() {
                                                 </p>
                                             </div>
                                             <div className="flex justify-center items-center flex-col m-3">
-                                                <SiVite size={70}/>
+                                                <SiVite size={70} />
                                                 <p className="badge badge-neutral">
                                                     Vite
                                                 </p>
                                             </div>
                                         </div>
-                                            <form method="dialog" className="modal-backdrop">
-                                                {/* if there is a button in form, it will close the modal */}
-                                                <button>
-                                                    close
-                                                </button>
-                                            </form>
+                                        <form
+                                            method="dialog"
+                                            className="modal-backdrop"
+                                        >
+                                            {/* if there is a button in form, it will close the modal */}
+                                            <button>close</button>
+                                        </form>
                                     </dialog>
                                     <a
                                         href="https://github.com/adaoj7/movie-search"
