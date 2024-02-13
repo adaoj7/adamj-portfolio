@@ -6,7 +6,9 @@ import NatsiteHero from "./assets/Natsite.png";
 import MailIcon from "./assets/Mail.svg";
 import AmaviHero from "./assets/AmaviChorale.png";
 import MovieHero from "./assets/Movie Lookup.png";
-import { FaExternalLinkAlt, FaReact } from "react-icons/fa";
+import { FaAws, FaExternalLinkAlt, FaNode, FaReact, FaVuejs } from "react-icons/fa";
+import { SiVite, SiExpress, SiCaddy, SiTailwindcss } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 function App() {
     return (
@@ -378,27 +380,67 @@ function App() {
                                                 ).showModal();
                                             }
                                         }}
+                                        title="Tech Stack Modal"
                                     >
                                         Tech Stack
                                     </button>
                                     <dialog id="natModal" className="modal">
-                                        <div className="modal-box">
-                                            <h3 className="font-bold text-lg">
-                                                Hello!
-                                            </h3>
-                                            <p className="py-4">
-                                                Press ESC key or click the
-                                                button below to close
-                                            </p>
-                                            <div className="modal-action">
-                                                <form method="dialog">
-                                                    {/* if there is a button in form, it will close the modal */}
-                                                    <button className="btn">
-                                                        Close
-                                                    </button>
-                                                </form>
+                                        <div className="modal-box flex flex-row flex-wrap justify-center">
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <FaReact size={70} />
+                                                <p className="badge badge-neutral">
+                                                    React
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <SiTailwindcss size={70} />
+                                                <p className="badge badge-neutral">
+                                                    TailwindCSS
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <FaNode size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Node.js
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <SiExpress size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Express
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <BiLogoPostgresql size={70} />
+                                                <p className="badge badge-neutral">
+                                                    PostgreSQL
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <SiVite size={70}/>
+                                                <p className="badge badge-neutral">
+                                                    Vite
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <FaAws size={70} />
+                                                <p className="badge badge-neutral">
+                                                    AWS EC2
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <SiCaddy size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Caddy
+                                                </p>
                                             </div>
                                         </div>
+                                        <form method="dialog" className="modal-backdrop">
+                                                {/* if there is a button in form, it will close the modal */}
+                                                <button>
+                                                    close
+                                                </button>
+                                            </form>
                                     </dialog>
                                     <button
                                         className="btn btn-primary hover:btn-ghost text-base"
@@ -406,12 +448,13 @@ function App() {
                                             (window.location.href =
                                                 "https://adamj-developer.com")
                                         }
+                                        title="Link to Nativity Site"
                                     >
                                         <FaExternalLinkAlt />
                                     </button>
                                     <a
                                         href="https://github.com/adaoj7/nativity_site"
-                                        title="GitHub Repo"
+                                        title="Nativity Site Repo"
                                     >
                                         <img
                                             src={Github}
@@ -435,7 +478,7 @@ function App() {
                                     choose?
                                 </p>
                                 <div className="card-actions justify-end flex flex-row">
-                                <button
+                                    <button
                                         className="btn btn-primary hover:btn-ghost"
                                         onClick={() => {
                                             if (document) {
@@ -446,31 +489,59 @@ function App() {
                                                 ).showModal();
                                             }
                                         }}
+                                        title="Tech Stack Modal"
                                     >
                                         Tech Stack
                                     </button>
                                     <dialog id="amaviModal" className="modal">
-                                        <div className="modal-box">
-                                            <h3 className="font-bold text-lg">
-                                                Hello!
-                                            </h3>
-                                            <p className="py-4">
-                                                Press ESC key or click the
-                                                button below to close
-                                            </p>
-                                            <div className="modal-action">
-                                                <form method="dialog">
-                                                    {/* if there is a button in form, it will close the modal */}
-                                                    <button className="btn">
-                                                        Close
-                                                    </button>
-                                                </form>
+                                        <div className="modal-box flex flex-row flex-wrap justify-center">
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <FaReact size={70} />
+                                                <p className="badge badge-neutral">
+                                                    React
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <SiTailwindcss size={70} />
+                                                <p className="badge badge-neutral">
+                                                    TailwindCSS
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <FaNode size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Node.js
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <SiExpress size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Express
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <BiLogoPostgresql size={70} />
+                                                <p className="badge badge-neutral">
+                                                    PostgreSQL
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <SiVite size={70}/>
+                                                <p className="badge badge-neutral">
+                                                    Vite
+                                                </p>
                                             </div>
                                         </div>
+                                            <form method="dialog" className="modal-backdrop">
+                                                {/* if there is a button in form, it will close the modal */}
+                                                <button>
+                                                    close
+                                                </button>
+                                            </form>
                                     </dialog>
                                     <a
-                                        href="https://github.com/adaoj7/nativity_site"
-                                        title="GitHub Repo"
+                                        href="https://github.com/crecendo-coders/amavi-dev"
+                                        title="Amavi Chorale Repo"
                                     >
                                         <img
                                             src={Github}
@@ -490,11 +561,11 @@ function App() {
                                     Movie Lookup w/ Vue
                                 </h2>
                                 <p>
-                                    If a dog chews shoes whose shoes does he
-                                    choose?
+                                    Movie lookup using the Movie Database API to
+                                    display 10 movies based on what is searched.
                                 </p>
                                 <div className="card-actions justify-end flex flex-row">
-                                <button
+                                    <button
                                         className="btn btn-primary hover:btn-ghost"
                                         onClick={() => {
                                             if (document) {
@@ -505,31 +576,41 @@ function App() {
                                                 ).showModal();
                                             }
                                         }}
+                                        title="Tech Stack Modal"
                                     >
                                         Tech Stack
                                     </button>
                                     <dialog id="movieModal" className="modal">
-                                        <div className="modal-box">
-                                            <h3 className="font-bold text-lg">
-                                                Hello!
-                                            </h3>
-                                            <p className="py-4">
-                                                Press ESC key or click the
-                                                button below to close
-                                            </p>
-                                            <div className="modal-action">
-                                                <form method="dialog">
-                                                    {/* if there is a button in form, it will close the modal */}
-                                                    <button className="btn">
-                                                        Close
-                                                    </button>
-                                                </form>
+                                        <div className="modal-box flex flex-row flex-wrap justify-center">
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <FaVuejs size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Vue
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <FaNode size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Node.js
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
+                                                <SiVite size={70}/>
+                                                <p className="badge badge-neutral">
+                                                    Vite
+                                                </p>
                                             </div>
                                         </div>
+                                            <form method="dialog" className="modal-backdrop">
+                                                {/* if there is a button in form, it will close the modal */}
+                                                <button>
+                                                    close
+                                                </button>
+                                            </form>
                                     </dialog>
                                     <a
-                                        href="https://github.com/adaoj7/nativity_site"
-                                        title="GitHub Repo"
+                                        href="https://github.com/adaoj7/movie-search"
+                                        title="Movie Search Repo"
                                     >
                                         <img
                                             src={Github}
