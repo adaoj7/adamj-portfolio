@@ -6,6 +6,7 @@ import NatsiteHero from "./assets/Natsite.png";
 import MailIcon from "./assets/Mail.svg";
 import AmaviHero from "./assets/AmaviChorale.png";
 import MovieHero from "./assets/Movie Lookup.png";
+import { FaExternalLinkAlt, FaReact } from "react-icons/fa";
 
 function App() {
     return (
@@ -134,10 +135,18 @@ function App() {
                                 />
                             </figure>
                             <div className="card-body">
-                                <h2 className="card-title">Nativity Site</h2>
+                                <h2 className="card-title">
+                                    Peoria Nativity Festival Site
+                                </h2>
                                 <p>
-                                    If a dog chews shoes whose shoes does he
-                                    choose?
+                                    This is a site rebuild of a static Wix site
+                                    for the Peoria Nativity Festival.
+                                </p>
+                                <p>
+                                    Tech stack: React, Node with Express, and
+                                    PostgreSQL hosted on an EC2 instance with
+                                    Caddy for the reverse proxy and https
+                                    certificate
                                 </p>
                                 <div className="card-actions justify-end flex flex-row">
                                     <button
@@ -147,7 +156,7 @@ function App() {
                                                 "https://adamj-developer.com")
                                         }
                                     >
-                                        Hosted Site
+                                        <FaExternalLinkAlt />
                                     </button>
                                     <a
                                         href="https://github.com/adaoj7/nativity_site"
@@ -236,13 +245,17 @@ function App() {
                             className="btn btn-info hover:btn-ghost shadow-xl"
                             onClick={() => {
                                 if (document) {
-                                  (document.getElementById('my_modal_2') as HTMLFormElement).showModal();
+                                    (
+                                        document.getElementById(
+                                            "modalDesktop"
+                                        ) as HTMLFormElement
+                                    ).showModal();
                                 }
                             }}
                         >
                             Click Me!
                         </button>
-                        <dialog id="my_modal_2" className="lg:modal">
+                        <dialog id="modalDesktop" className="lg:modal">
                             <div className="modal-box">
                                 <h3 className="font-bold text-xl">
                                     Gotcha! Now you have to reach out. I don't
@@ -335,21 +348,58 @@ function App() {
                         </div>
                     </section>
                     <section className="flex justify-center flex-col items-center mt-4">
-                        <h2 className="my-10 text-6xl font-Playfair font-semibold">
+                        <h2 className="my-10 text-6xl font-Playfair text-white font-semibold">
                             My Projects
                         </h2>
-                        <div className="card card-side w-2/3 bg-base-300 shadow-xl mt-10 mb-4">
+                        <div className="card card-side w-3/4 h-auto bg-base-300 shadow-xl mt-10 mb-4">
                             {/* I need to take the screenshot from my large monitor */}
-                            <figure className="w-2/3">
+                            <figure className="w-3/4 h-full">
                                 <img src={NatsiteHero} alt="Natsite Hero" />
                             </figure>
-                            <div className="card-body">
+                            <div className="card-body w-[20px]">
                                 <h2 className="card-title">Nativity Site</h2>
                                 <p>
-                                    If a dog chews shoes whose shoes does he
-                                    choose?
+                                    This is a site rebuild of a static Wix site
+                                    for the Peoria Nativity Festival. With
+                                    features such as login for volunteer shift
+                                    management and StripeAPI for secure
+                                    donations.
                                 </p>
+
                                 <div className="card-actions justify-end flex flex-row">
+                                    <button
+                                        className="btn btn-primary hover:btn-ghost"
+                                        onClick={() => {
+                                            if (document) {
+                                                (
+                                                    document.getElementById(
+                                                        "natModal"
+                                                    ) as HTMLFormElement
+                                                ).showModal();
+                                            }
+                                        }}
+                                    >
+                                        Tech Stack
+                                    </button>
+                                    <dialog id="natModal" className="modal">
+                                        <div className="modal-box">
+                                            <h3 className="font-bold text-lg">
+                                                Hello!
+                                            </h3>
+                                            <p className="py-4">
+                                                Press ESC key or click the
+                                                button below to close
+                                            </p>
+                                            <div className="modal-action">
+                                                <form method="dialog">
+                                                    {/* if there is a button in form, it will close the modal */}
+                                                    <button className="btn">
+                                                        Close
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </dialog>
                                     <button
                                         className="btn btn-primary hover:btn-ghost text-base"
                                         onClick={() =>
@@ -357,7 +407,7 @@ function App() {
                                                 "https://adamj-developer.com")
                                         }
                                     >
-                                        Hosted Site
+                                        <FaExternalLinkAlt />
                                     </button>
                                     <a
                                         href="https://github.com/adaoj7/nativity_site"
@@ -372,11 +422,11 @@ function App() {
                                 </div>
                             </div>
                         </div>
-                        <div className="card card-side w-2/3 bg-base-300 shadow-xl my-4">
-                            <figure className="w-2/3">
+                        <div className="card card-side w-3/4 h-auto bg-base-300 shadow-xl my-4">
+                            <figure className="w-3/4 h-full">
                                 <img src={AmaviHero} alt="Amavi Hero" />
                             </figure>
-                            <div className="card-body">
+                            <div className="card-body w-[20px]">
                                 <h2 className="card-title">
                                     Amavi Chorale Site
                                 </h2>
@@ -385,6 +435,39 @@ function App() {
                                     choose?
                                 </p>
                                 <div className="card-actions justify-end flex flex-row">
+                                <button
+                                        className="btn btn-primary hover:btn-ghost"
+                                        onClick={() => {
+                                            if (document) {
+                                                (
+                                                    document.getElementById(
+                                                        "amaviModal"
+                                                    ) as HTMLFormElement
+                                                ).showModal();
+                                            }
+                                        }}
+                                    >
+                                        Tech Stack
+                                    </button>
+                                    <dialog id="amaviModal" className="modal">
+                                        <div className="modal-box">
+                                            <h3 className="font-bold text-lg">
+                                                Hello!
+                                            </h3>
+                                            <p className="py-4">
+                                                Press ESC key or click the
+                                                button below to close
+                                            </p>
+                                            <div className="modal-action">
+                                                <form method="dialog">
+                                                    {/* if there is a button in form, it will close the modal */}
+                                                    <button className="btn">
+                                                        Close
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </dialog>
                                     <a
                                         href="https://github.com/adaoj7/nativity_site"
                                         title="GitHub Repo"
@@ -398,11 +481,11 @@ function App() {
                                 </div>
                             </div>
                         </div>
-                        <div className="card card-side w-2/3 bg-base-300 shadow-xl my-4">
-                            <figure className="w-2/3">
+                        <div className="card card-side w-3/4 h-auto bg-base-300 shadow-xl my-4">
+                            <figure className="w-3/4 h-full">
                                 <img src={MovieHero} alt="Movie Hero" />
                             </figure>
-                            <div className="card-body">
+                            <div className="card-body w-[20px]">
                                 <h2 className="card-title">
                                     Movie Lookup w/ Vue
                                 </h2>
@@ -411,6 +494,39 @@ function App() {
                                     choose?
                                 </p>
                                 <div className="card-actions justify-end flex flex-row">
+                                <button
+                                        className="btn btn-primary hover:btn-ghost"
+                                        onClick={() => {
+                                            if (document) {
+                                                (
+                                                    document.getElementById(
+                                                        "movieModal"
+                                                    ) as HTMLFormElement
+                                                ).showModal();
+                                            }
+                                        }}
+                                    >
+                                        Tech Stack
+                                    </button>
+                                    <dialog id="movieModal" className="modal">
+                                        <div className="modal-box">
+                                            <h3 className="font-bold text-lg">
+                                                Hello!
+                                            </h3>
+                                            <p className="py-4">
+                                                Press ESC key or click the
+                                                button below to close
+                                            </p>
+                                            <div className="modal-action">
+                                                <form method="dialog">
+                                                    {/* if there is a button in form, it will close the modal */}
+                                                    <button className="btn">
+                                                        Close
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </dialog>
                                     <a
                                         href="https://github.com/adaoj7/nativity_site"
                                         title="GitHub Repo"
