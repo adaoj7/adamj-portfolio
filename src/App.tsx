@@ -281,7 +281,7 @@ function App() {
                                     >
                                         Tech Stack
                                     </button>
-                                    <dialog id="amaviModal" className="modal">
+                                    <dialog id="amaviPhoneModal" className="modal">
                                         <div className="modal-box flex flex-row flex-wrap justify-center">
                                             <div className="flex justify-center items-center flex-col m-3">
                                                 <FaReact size={70} />
@@ -369,7 +369,7 @@ function App() {
                                     >
                                         Tech Stack
                                     </button>
-                                    <dialog id="movieModal" className="modal">
+                                    <dialog id="moviePhoneModal" className="modal">
                                         <div className="modal-box flex flex-row flex-wrap justify-center">
                                             <div className="flex justify-center items-center flex-col m-3">
                                                 <FaVuejs size={70} />
@@ -685,7 +685,7 @@ function App() {
                                     >
                                         Tech Stack
                                     </button>
-                                    <dialog id="amaviModal" className="modal">
+                                    <dialog id="amaviDesktopModal" className="modal">
                                         <div className="modal-box flex flex-row flex-wrap justify-center">
                                             <div className="flex justify-center items-center flex-col m-3">
                                                 <FaReact size={70} />
@@ -773,7 +773,7 @@ function App() {
                                     >
                                         Tech Stack
                                     </button>
-                                    <dialog id="movieModal" className="modal">
+                                    <dialog id="movieDesktopModal" className="modal">
                                         <div className="modal-box flex flex-row flex-wrap justify-center">
                                             <div className="flex justify-center items-center flex-col m-3">
                                                 <FaVuejs size={70} />
