@@ -1455,6 +1455,14 @@ html {
   position: relative;
 }
 
+.bottom-12 {
+  bottom: 3rem;
+}
+
+.right-12 {
+  right: 3rem;
+}
+
 .bottom-10 {
   bottom: 2.5rem;
 }
@@ -1498,10 +1506,6 @@ html {
   margin-top: 2.5rem;
 }
 
-.mt-16 {
-  margin-top: 4rem;
-}
-
 .mt-20 {
   margin-top: 5rem;
 }
@@ -1516,6 +1520,14 @@ html {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .flex {
@@ -1566,10 +1578,6 @@ html {
   width: 75%;
 }
 
-.w-4\/5 {
-  width: 80%;
-}
-
 .w-\[20px\] {
   width: 20px;
 }
@@ -1584,6 +1592,14 @@ html {
 
 .w-full {
   width: 100%;
+}
+
+.w-4\/5 {
+  width: 80%;
+}
+
+.w-5\/6 {
+  width: 83.333333%;
 }
 
 .flex-row {
@@ -1757,14 +1773,14 @@ html {
   color: var(--fallback-in,oklch(var(--in)/var(--tw-text-opacity)));
 }
 
-.text-primary-content {
-  --tw-text-opacity: 1;
-  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-primary-content {
+  --tw-text-opacity: 1;
+  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
 }
 
 .shadow-xl {
@@ -1878,3 +1894,4 @@ html {
     display: none;
   }
 }
+

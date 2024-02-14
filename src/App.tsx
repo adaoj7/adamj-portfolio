@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa";
 import { SiVite, SiExpress, SiCaddy, SiTailwindcss } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
-import Counter from "./Counter";
+
 
 function App() {
     return (
@@ -504,7 +504,6 @@ function App() {
                                         src={Profile}
                                     />
                                 </div>
-                                <Counter/>
                             </div>
                         </section>
                         <div className="flex w-full p-20 justify-center items-center mt-10">
