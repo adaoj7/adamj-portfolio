@@ -5,11 +5,15 @@ function Counter() {
 
     useEffect(() => {
         const storedCount = localStorage.getItem('pageVisits')
-        const initialCount = Number(storedCount) || 0
+        console.log(storedCount)
+        let initialCount = Number(storedCount) || 0
         setCount(initialCount + 1)
-        const countString = count.toString()
+        initialCount += 1
+        const countString = initialCount.toString()
+        console.log(countString)
         localStorage.setItem('pageVisits', countString)
     },[])
+
   return (
     <div className='text-primary-content'>{count}</div>
   )
