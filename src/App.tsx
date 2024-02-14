@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa";
 import { SiVite, SiExpress, SiCaddy, SiTailwindcss } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
+import Counter from "./Counter";
 
 function App() {
     return (
@@ -27,7 +28,7 @@ function App() {
                 <main className="overflow-y-hidden">
                     <section className="flex flex-col justify-around h-screen bg-primary-content">
                         <section className="flex items-center justify-center h-[40%]">
-                            <div className="w-[60%]">
+                            <div className="w-[60%] mt-16">
                                 <img
                                     className="rounded-ss-[25px] rounded-se-[25px] rounded-es-[25px] rounded-ee-[25px]"
                                     src={Profile}
@@ -503,6 +504,7 @@ function App() {
                                         src={Profile}
                                     />
                                 </div>
+                                <Counter/>
                             </div>
                         </section>
                         <div className="flex w-full p-20 justify-center items-center mt-10">
@@ -788,6 +790,12 @@ function App() {
                                                 </p>
                                             </div>
                                             <div className="flex justify-center items-center flex-col m-3">
+                                                <SiExpress size={70} />
+                                                <p className="badge badge-neutral">
+                                                    Express
+                                                </p>
+                                            </div>
+                                            <div className="flex justify-center items-center flex-col m-3">
                                                 <SiVite size={70} />
                                                 <p className="badge badge-neutral">
                                                     Vite
@@ -823,8 +831,9 @@ function App() {
                             Copyright © 2024 - All right reserved by me, Adam
                             Johnson
                         </p>
-                        <p>Built w/ React, Tailwind, and DaisyUI</p>
+                        <p>Built w/ React TS, Tailwind, and DaisyUI</p>
                     </aside>
+                    
                 </footer>
             </div>
         </>
