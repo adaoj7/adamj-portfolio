@@ -143,11 +143,11 @@ function App() {
                                     Peoria Nativity Festival Site
                                 </h2>
                                 <p>
-                                    This is a site rebuild of a static Wix site
-                                    for the Peoria Nativity Festival. With
+                                    This is a site replacement of a static Wix
+                                    site for the Peoria Nativity Festival. With
                                     features such as login for volunteer shift
                                     management and StripeAPI for secure
-                                    donations.
+                                    donations. Go check it out.
                                 </p>
                                 <div className="card-actions justify-between flex flex-row">
                                     <button
@@ -555,11 +555,11 @@ function App() {
                                     Peoria Nativity Festival Site
                                 </h2>
                                 <p>
-                                    This is a site rebuild of a static Wix site
-                                    for the Peoria Nativity Festival. With
+                                    This is a site replacement of a static Wix
+                                    site for the Peoria Nativity Festival. With
                                     features such as login for volunteer shift
                                     management and StripeAPI for secure
-                                    donations.
+                                    donations. Go check it out.
                                 </p>
 
                                 <div className="card-actions justify-end flex flex-row flex-nowrap">
