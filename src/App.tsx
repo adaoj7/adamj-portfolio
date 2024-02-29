@@ -16,7 +16,6 @@ import {
 import { SiVite, SiExpress, SiCaddy, SiTailwindcss } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 
-
 function App() {
     return (
         <>
@@ -26,7 +25,7 @@ function App() {
                     {/* Move modal button to bottom corner on scroll */}
                 </header>
                 <main className="overflow-y-hidden">
-                    <section className="flex flex-col justify-around h-screen bg-primary-content">
+                    <section className="flex flex-col justify-around h-screen bg-gradient-to-tl from-slate-900 to-primary-content">
                         <section className="flex items-center justify-center h-[40%]">
                             <div className="w-[60%] mt-16">
                                 <img
@@ -137,10 +136,7 @@ function App() {
                         <div className="card w-3/4 bg-base-300 shadow-xl mt-10 mb-4">
                             {/* I need to take the screenshot from my large monitor */}
                             <figure className="h-full">
-                                <img
-                                    src={NatsiteHero}
-                                    alt="Natsite Hero"
-                                />
+                                <img src={NatsiteHero} alt="Natsite Hero" />
                             </figure>
                             <div className="card-body">
                                 <h2 className="card-title">
@@ -154,8 +150,7 @@ function App() {
                                     donations.
                                 </p>
                                 <div className="card-actions justify-between flex flex-row">
-                                
-                                <button
+                                    <button
                                         className="btn btn-primary hover:btn-ghost"
                                         onClick={() => {
                                             if (document) {
@@ -170,7 +165,10 @@ function App() {
                                     >
                                         Tech Stack
                                     </button>
-                                    <dialog id="natPhoneModal" className="modal">
+                                    <dialog
+                                        id="natPhoneModal"
+                                        className="modal"
+                                    >
                                         <div className="modal-box flex flex-row flex-wrap justify-center">
                                             <div className="flex justify-center items-center flex-col m-3">
                                                 <FaReact size={70} />
@@ -260,14 +258,15 @@ function App() {
                                     Amavi Chorale Site
                                 </h2>
                                 <p>
-                                    This site enables
-                                    admins with comprehensive functionality for effective chorale management
-                                    including email list subscriptions, audition
-                                    management, event management, and donations
-                                    utilizing StripeAPI.
+                                    This site enables admins with comprehensive
+                                    functionality for effective chorale
+                                    management including email list
+                                    subscriptions, audition management, event
+                                    management, and donations utilizing
+                                    StripeAPI.
                                 </p>
                                 <div className="card-actions justify-end flex flex-row">
-                                <button
+                                    <button
                                         className="btn btn-primary hover:btn-ghost"
                                         onClick={() => {
                                             if (document) {
@@ -282,7 +281,10 @@ function App() {
                                     >
                                         Tech Stack
                                     </button>
-                                    <dialog id="amaviPhoneModal" className="modal">
+                                    <dialog
+                                        id="amaviPhoneModal"
+                                        className="modal"
+                                    >
                                         <div className="modal-box flex flex-row flex-wrap justify-center">
                                             <div className="flex justify-center items-center flex-col m-3">
                                                 <FaReact size={70} />
@@ -355,7 +357,7 @@ function App() {
                                     display 10 movies based on what is searched.
                                 </p>
                                 <div className="card-actions justify-end flex flex-row">
-                                <button
+                                    <button
                                         className="btn btn-primary hover:btn-ghost"
                                         onClick={() => {
                                             if (document) {
@@ -370,7 +372,10 @@ function App() {
                                     >
                                         Tech Stack
                                     </button>
-                                    <dialog id="moviePhoneModal" className="modal">
+                                    <dialog
+                                        id="moviePhoneModal"
+                                        className="modal"
+                                    >
                                         <div className="modal-box flex flex-row flex-wrap justify-center">
                                             <div className="flex justify-center items-center flex-col m-3">
                                                 <FaVuejs size={70} />
@@ -431,7 +436,7 @@ function App() {
                     {/* Move modal button to bottom corner on scroll */}
                     <section className="fixed bottom-10 right-10">
                         <button
-                            className="btn btn-info hover:btn-ghost shadow-xl"
+                            className="btn btn-info hover:btn-ghost hover:animate-bounce shadow-xl"
                             onClick={() => {
                                 if (document) {
                                     (
@@ -495,7 +500,7 @@ function App() {
                     </section>
                 </header>
                 <main className="overflow-x-hidden">
-                    <section className="flex flex-row justify-start h-screen bg-primary-content">
+                    <section className="flex flex-row justify-start h-screen bg-gradient-to-tl from-slate-900 to-primary-content ">
                         <section className="flex items-center justify-start ml-44">
                             <div>
                                 <div className=" w-[450px]">
@@ -546,7 +551,7 @@ function App() {
                                 <img src={NatsiteHero} alt="Natsite Hero" />
                             </figure>
                             <div className="card-body w-[20px]">
-                            <h2 className="card-title">
+                                <h2 className="card-title">
                                     Peoria Nativity Festival Site
                                 </h2>
                                 <p>
@@ -573,7 +578,10 @@ function App() {
                                     >
                                         Tech Stack
                                     </button>
-                                    <dialog id="natDesktopModal" className="modal">
+                                    <dialog
+                                        id="natDesktopModal"
+                                        className="modal"
+                                    >
                                         <div className="modal-box flex flex-row flex-wrap justify-center">
                                             <div className="flex justify-center items-center flex-col m-3">
                                                 <FaReact size={70} />
@@ -664,11 +672,12 @@ function App() {
                                     Amavi Chorale Site
                                 </h2>
                                 <p>
-                                    This site enables
-                                    admins with comprehensive functionality for effective chorale management
-                                    including email list subscriptions, audition
-                                    management, event management, and donations
-                                    utilizing StripeAPI.
+                                    This site enables admins with comprehensive
+                                    functionality for effective chorale
+                                    management including email list
+                                    subscriptions, audition management, event
+                                    management, and donations utilizing
+                                    StripeAPI.
                                 </p>
                                 <div className="card-actions justify-end flex flex-row">
                                     <button
@@ -686,7 +695,10 @@ function App() {
                                     >
                                         Tech Stack
                                     </button>
-                                    <dialog id="amaviDesktopModal" className="modal">
+                                    <dialog
+                                        id="amaviDesktopModal"
+                                        className="modal"
+                                    >
                                         <div className="modal-box flex flex-row flex-wrap justify-center">
                                             <div className="flex justify-center items-center flex-col m-3">
                                                 <FaReact size={70} />
@@ -774,7 +786,10 @@ function App() {
                                     >
                                         Tech Stack
                                     </button>
-                                    <dialog id="movieDesktopModal" className="modal">
+                                    <dialog
+                                        id="movieDesktopModal"
+                                        className="modal"
+                                    >
                                         <div className="modal-box flex flex-row flex-wrap justify-center">
                                             <div className="flex justify-center items-center flex-col m-3">
                                                 <FaVuejs size={70} />
@@ -832,7 +847,6 @@ function App() {
                         </p>
                         <p>Built w/ React TS, Tailwind, and DaisyUI</p>
                     </aside>
-                    
                 </footer>
             </div>
         </>
