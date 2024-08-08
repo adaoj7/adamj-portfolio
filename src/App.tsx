@@ -177,6 +177,7 @@ function App() {
                                                     React
                                                 </p>
                                             </div>
+                                            {/* Add Typescript */}
                                             <div className="flex justify-center items-center flex-col m-3">
                                                 <SiTailwindcss size={70} />
                                                 <p className="badge badge-neutral">
