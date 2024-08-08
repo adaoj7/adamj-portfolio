@@ -1,5 +1,4 @@
-﻿import DaisyUIPlugin from "daisyui/plugi"
-
+﻿
 /** @type {import('tailwindcss').Config} */
 export default {
     theme: {

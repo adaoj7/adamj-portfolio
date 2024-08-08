@@ -1,4 +1,5 @@
-import "./App.css";
+// After finishing the Nativity Site I need to refactor this with components for modals, cards, and buttons
+
 import Profile from "./assets/Edited Headshot.jpeg";
 import Github from "./assets/github-mark-white.png";
 import LinkedIn from "./assets/In-White-128.png";
@@ -87,7 +88,7 @@ function App() {
                                             <button
                                                 onClick={() =>
                                                     (window.location.href =
-                                                        "mailto:adaojohnson902@gmail.com")
+                                                        "mailto:adaoj.dev@gmail.com")
                                                 }
                                                 className="flex items-center hover:text-gray-300"
                                             >
