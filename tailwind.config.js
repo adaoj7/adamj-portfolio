@@ -1,18 +1,18 @@
-﻿
-/** @type {import('tailwindcss').Config} */
+﻿/** @type {import('tailwindcss').Config} */
+import daisyui from "daisyui";
+
 export default {
     theme: {
         // Some useful comment
         fontFamily: {
-          'Roboto': ['"Roboto Slab"', 'serif'],
-          'OpenSans': ['"Open Sans"', 'sans-serif'],
-          'Playfair': ['"Playfair Display"', 'serif'],
-          'Montserrat': ['"Montserrat"', 'sans-serif'],
-
+            Roboto: ['"Roboto Slab"', "serif"],
+            OpenSans: ['"Open Sans"', "sans-serif"],
+            Playfair: ['"Playfair Display"', "serif"],
+            Montserrat: ['"Montserrat"', "sans-serif"],
         },
-      },
+    },
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-    plugins: [require("daisyui")],
+    plugins: [daisyui],
     daisyui: {
         themes: ["night"], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
         darkTheme: "dark", // name of one of the included themes for dark mode
