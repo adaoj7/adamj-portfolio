@@ -7,12 +7,14 @@ import NatsiteHero from "./assets/Natsite.png";
 import MailIcon from "./assets/Mail.svg";
 import AmaviHero from "./assets/AmaviChorale.png";
 import MovieHero from "./assets/Movie Lookup.png";
+import RefactorHero from "./assets/Portfolio Hero.png";
 import {
     FaAws,
     FaExternalLinkAlt,
     FaNode,
     FaReact,
     FaVuejs,
+    FaGithub,
 } from "react-icons/fa";
 import {
     SiVite,
@@ -83,13 +85,15 @@ function Mobile() {
                             <section className="flex justify-end">
                                 <button
                                     className="btn btn-info hover:btn-ghost shadow-xl"
-                                    onClick={() =>
-                                        // @ts-ignore
-                                        document
-                                            .getElementById("my_modal_1")
-                                            // @ts-ignore
-                                            .showModal()
-                                    }
+                                    onClick={() => {
+                                        if (document) {
+                                            (
+                                                document.getElementById(
+                                                    "my_modal_1"
+                                                ) as HTMLFormElement
+                                            ).showModal();
+                                        }
+                                    }}
                                 >
                                     Click Me!
                                 </button>
@@ -160,7 +164,7 @@ function Mobile() {
                                     Peoria Nativity Festival Site
                                 </h2>
                                 <p>This site was build to</p>
-                                <div className="card-actions justify-between flex flex-row">
+                                <div className="card-actions justify-between flex-row">
                                     <button
                                         className="btn btn-primary hover:btn-ghost"
                                         onClick={() => {
@@ -252,11 +256,7 @@ function Mobile() {
                                         href="https://github.com/adaoj7/nativity_site"
                                         title="GitHub Repo"
                                     >
-                                        <img
-                                            src={Github}
-                                            alt="Github Logo"
-                                            className="h-12"
-                                        />
+                                        <FaGithub size={30} />
                                     </a>
                                 </div>
                             </div>
@@ -420,18 +420,14 @@ function Mobile() {
                                         href="https://github.com/adaoj7/nativity_site"
                                         title="GitHub Repo"
                                     >
-                                        <img
-                                            src={Github}
-                                            alt="Github Logo"
-                                            className="h-12"
-                                        />
+                                        <FaGithub size={30} />
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </section>
                 </main>
-                <footer className="footer footer-center h-28 p-4 bg-base-300 text-base-content mt-8">
+                <footer className="footer footer-center h-28 p-4 bg-base-300 text-base-content mt-8 m-4 ">
                     <aside className="text-base">
                         <p>
                             Copyright © 2024 - All right reserved by me, Adam
@@ -619,11 +615,11 @@ function Desktop() {
                     <div className="card card-side w-4/5 h-auto bg-base-300 shadow-xl mb-4">
                         {/* I need to take the screenshot from my large monitor */}
                         <figure className="w-3/4 h-full">
-                            <img src={NatsiteHero} alt="Natsite Hero" />
+                            <img src={RefactorHero} alt="Natsite Hero" />
                         </figure>
                         <div className="card-body w-[20px]">
                             <h2 className="card-title">
-                                Peoria Nativity Festival Site
+                                Peoria Nativity Festival Site v2
                             </h2>
                             <p>
                                 This is a site replacement of a static Wix site
@@ -639,7 +635,7 @@ function Desktop() {
                                         if (document) {
                                             (
                                                 document.getElementById(
-                                                    "natDesktopModal"
+                                                    "natv2DesktopModal"
                                                 ) as HTMLFormElement
                                             ).showModal();
                                         }
@@ -648,9 +644,122 @@ function Desktop() {
                                 >
                                     Tech Stack
                                 </button>
-                                <dialog id="natDesktopModal" className="modal">
-                                    <div className="modal-box flex flex-row flex-wrap justify-center">
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                <dialog
+                                    id="natv2DesktopModal"
+                                    className="modal"
+                                >
+                                    <div className="modal-box flex flex-row flex-wrap justify-center [&>*]:flex [&>*]:flex-col [&>*]:items-center [&>*]:justify-center [&>*]:m-3">
+                                        <div className="">
+                                            <FaReact size={70} />
+                                            <p className="badge badge-neutral">
+                                                React
+                                            </p>
+                                        </div>
+                                        <div className="">
+                                            <SiTailwindcss size={70} />
+                                            <p className="badge badge-neutral">
+                                                TailwindCSS
+                                            </p>
+                                        </div>
+                                        <div className="">
+                                            <FaNode size={70} />
+                                            <p className="badge badge-neutral">
+                                                Node.js
+                                            </p>
+                                        </div>
+                                        <div className="">
+                                            <SiExpress size={70} />
+                                            <p className="badge badge-neutral">
+                                                Express
+                                            </p>
+                                        </div>
+                                        <div className="">
+                                            <BiLogoPostgresql size={70} />
+                                            <p className="badge badge-neutral">
+                                                PostgreSQL
+                                            </p>
+                                        </div>
+                                        <div className="">
+                                            <SiVite size={70} />
+                                            <p className="badge badge-neutral">
+                                                Vite
+                                            </p>
+                                        </div>
+                                        <div className="">
+                                            <SiDocker size={70} />
+                                            <p className="badge badge-neutral">
+                                                Docker
+                                            </p>
+                                        </div>
+                                        <div className="">
+                                            <SiCaddy size={70} />
+                                            <p className="badge badge-neutral">
+                                                Caddy
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <form
+                                        method="dialog"
+                                        className="modal-backdrop"
+                                    >
+                                        {/* if there is a button in form, it will close the modal */}
+                                        <button>close</button>
+                                    </form>
+                                </dialog>
+                                <a
+                                    className="btn btn-primary hover:btn-ghost text-base"
+                                    href="https://pc-fn.org"
+                                    title="Link to Nativity Site v2"
+                                >
+                                    <FaExternalLinkAlt />
+                                </a>
+                                <a
+                                    href="https://github.com/adaoj7/natsite-refactor"
+                                    title="Nativity Refactor Site Repo"
+                                >
+                                    <FaGithub size={50} />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="card card-side w-4/5 h-auto bg-base-300 shadow-xl mb-4">
+                        {/* I need to take the screenshot from my large monitor */}
+                        <figure className="w-3/4 h-full">
+                            <img src={NatsiteHero} alt="Natsite Hero" />
+                        </figure>
+                        <div className="card-body w-[20px]">
+                            <h2 className="card-title">
+                                Peoria Nativity Festival Site v1
+                            </h2>
+                            <p>
+                                This is a site replacement of a static Wix site
+                                for the Peoria Nativity Festival. With features
+                                such as login for volunteer shift management and
+                                StripeAPI for secure donations. Go check it out.
+                            </p>
+
+                            <div className="card-actions justify-end flex flex-row flex-nowrap">
+                                <button
+                                    className="btn btn-primary hover:btn-ghost"
+                                    onClick={() => {
+                                        if (document) {
+                                            (
+                                                document.getElementById(
+                                                    "natv1DesktopModal"
+                                                ) as HTMLFormElement
+                                            ).showModal();
+                                        }
+                                    }}
+                                    title="Tech Stack Modal"
+                                >
+                                    Tech Stack
+                                </button>
+                                <dialog
+                                    id="natv1DesktopModal"
+                                    className="modal"
+                                >
+                                    <div className="modal-box flex flex-row flex-wrap justify-center w-1/2">
+                                        <div className="flex justify-center items-center flex-col m-3 ">
                                             <FaReact size={70} />
                                             <p className="badge badge-neutral">
                                                 React
@@ -721,11 +830,7 @@ function Desktop() {
                                     href="https://github.com/adaoj7/nativity_site"
                                     title="Nativity Site Repo"
                                 >
-                                    <img
-                                        src={Github}
-                                        alt="Github Logo"
-                                        className="h-12"
-                                    />
+                                    <FaGithub size={50} />
                                 </a>
                             </div>
                         </div>
@@ -813,11 +918,7 @@ function Desktop() {
                                     href="https://github.com/crecendo-coders/amavi-dev"
                                     title="Amavi Chorale Repo"
                                 >
-                                    <img
-                                        src={Github}
-                                        alt="Github Logo"
-                                        className="h-12"
-                                    />
+                                    <FaGithub size={50} />
                                 </a>
                             </div>
                         </div>
@@ -890,11 +991,7 @@ function Desktop() {
                                     href="https://github.com/adaoj7/movie-search"
                                     title="Movie Search Repo"
                                 >
-                                    <img
-                                        src={Github}
-                                        alt="Github Logo"
-                                        className="h-12"
-                                    />
+                                    <FaGithub size={50} />
                                 </a>
                             </div>
                         </div>
