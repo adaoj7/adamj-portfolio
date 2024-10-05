@@ -25,6 +25,8 @@ import {
     SiDocker,
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
+import GitHubCalendar from "react-github-calendar";
+import ThemeInput from "react-github-calendar";
 
 function App() {
     return (
@@ -150,6 +152,7 @@ function Mobile() {
                             </section>
                         </div>
                     </section>
+
                     <section className="flex justify-center flex-col items-center mt-4">
                         <h2 className="my-10 text-5xl font-Playfair   font-semibold">
                             My Projects
@@ -442,6 +445,11 @@ function Mobile() {
 }
 
 function Desktop() {
+    const explicitTheme = {
+        light: ["#f0f0f0", "#c4edde", "#7ac7c4", "#f73859", "#384259"],
+        dark: ["#383838", "#4D455D", "#7DB9B6", "#F5E9CF", "#E96479"],
+    };
+
     return (
         <div className="hidden lg:flex flex-col h-full">
             <header className="">
@@ -606,6 +614,13 @@ function Desktop() {
                             <p className="badge badge-neutral mt-2">Vite</p>
                         </div>
                     </div>
+                </section>
+
+                <section className="flex flex-col items-center my-12">
+                    <h2 className="mb-10 text-4xl font-semibold">
+                        Github Contributions
+                    </h2>
+                    <GitHubCalendar username="adaoj7" />
                 </section>
 
                 <section className="flex flex-col items-center bg-gradient-to-l from-slate-900 to-primary-content py-12">
