@@ -38,55 +38,68 @@ function App() {
 }
 
 function Mobile() {
+    const selectLastHalfYear = (contributions) => {
+        const currentYear = new Date().getFullYear();
+        const currentMonth = new Date().getMonth();
+        const shownMonths = 6;
+
+        return contributions.filter((activity) => {
+            const date = new Date(activity.date);
+            const monthOfDay = date.getMonth();
+
+            return (
+                date.getFullYear() === currentYear &&
+                monthOfDay > currentMonth - shownMonths &&
+                monthOfDay <= currentMonth
+            );
+        });
+    };
+
     return (
         <>
             {/* Mobile */}
             <div className="lg:hidden flex flex-col h-full">
-                <header className="relative">
-                    {/* Move modal button to bottom corner on scroll */}
-                </header>
-                <main className="overflow-y-hidden">
-                    <section className="flex flex-col justify-around h-screen bg-gradient-to-tl from-slate-900 to-primary-content">
-                        <section className="flex items-center justify-center h-[40%]">
-                            <div className=" mt-16">
-                                <img
-                                    className="rounded-ss-[25px] rounded-se-[25px] rounded-es-[25px] rounded-ee-[25px]"
-                                    src={Profile}
-                                />
+                <main className="">
+                    <section className="card bg-gradient-to-tl from-slate-900 to-primary-content">
+                        <figure className="flex m-auto mt-8 size-72">
+                            <img
+                                className="rounded-es-[25px] rounded-ee-[25px]"
+                                src={Profile}
+                            />
+                        </figure>
+                        <div className="card-body top-60">
+                            <div className="flex flex-col font-Playfair">
+                                <h2 className="text-2xl">Hi, I'm Adam</h2>
+                                <div className="italic text-sm">
+                                    (Adao is Adam in Portuguese)
+                                </div>
                             </div>
-                        </section>
-                        <div className="flex px-8 flex-col">
-                            <div className="flex flex-wrap h-[370px]">
-                                <h2 className="  font-Playfair font-semibold mb-6 text-3xl">
-                                    Hi, I'm Adam
-                                </h2>
-                                <p className=" ">
+                            <div className="flex flex-col gap-4">
+                                <div className="">
                                     One day, the semester before I graduated
-                                    from college, while talking with my wife, a
-                                    feeling hit me really strongly.{" "}
-                                    <span className="font-bold text-info">
-                                        "I should learn to code."{" "}
-                                    </span>
-                                </p>
-                                <p className="mt-3  ">
+                                    from BYU-Idaho, while talking with my wife,
+                                    a feeling hit me really strongly. "I should
+                                    learn to code."
+                                </div>
+                                <div className="">
                                     The Monday after I got my degree I began a
                                     coding bootcamp at Devmountain specializing
                                     in web development. I was not prepared for
                                     the joy that came into my life as a result.
-                                </p>
-                                <p className="mt-3  ">
+                                </div>
+                                <div className="">
                                     I'm a new father, an avid golfer, a soccer
-                                    player and coach, a hungry learner, and a{" "}
-                                </p>
-                                <span className="font-bold text-info h-[40px]">
-                                    React Web Developer
-                                </span>
-                                <div className="flex flex-row justify-center mt-20"></div>
+                                    player and coach, a Nebraska football fan, a
+                                    hungry learner, and a{" "}
+                                    <span className="italic text-info">
+                                        Front-end Software Engineer
+                                    </span>
+                                </div>
                             </div>
 
                             <section className="flex justify-end">
                                 <button
-                                    className="btn btn-info hover:btn-ghost shadow-xl"
+                                    className="btn btn-info hover:btn-ghost shadow-xl mt-4"
                                     onClick={() => {
                                         if (document) {
                                             (
@@ -153,11 +166,64 @@ function Mobile() {
                         </div>
                     </section>
 
-                    <section className="flex justify-center flex-col items-center mt-4">
-                        <h2 className="my-10 text-5xl font-Playfair   font-semibold">
+                    <section className="flex flex-col items-center my-12">
+                        <h2 className="mb-10 text-4xl font-semibold">
+                            My Tech Stack
+                        </h2>
+                        <div className="grid grid-cols-3 gap-4">
+                            <BadgeWIcon name="React">
+                                <FaReact size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="Typescript">
+                                <SiTypescript size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="Node.js">
+                                <FaNode size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="PostgreSQL">
+                                <BiLogoPostgresql size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="Docker">
+                                <SiDocker size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="Vue.js">
+                                <FaVuejs size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="TailwindCSS">
+                                <SiTailwindcss size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="Caddy">
+                                <SiCaddy size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="Express">
+                                <SiExpress size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="Vite">
+                                <SiVite size={90} />
+                            </BadgeWIcon>
+                        </div>
+                    </section>
+
+                    <section className="p-4">
+                        <h2 className="flex justify-center mb-10 text-4xl font-semibold">
+                            Github Contributions
+                        </h2>
+                        <GitHubCalendar
+                            username="adaoj7"
+                            blockSize={12}
+                            transformData={selectLastHalfYear}
+                            labels={{
+                                totalCount:
+                                    "{{count}} contributions in the last 6 months",
+                            }}
+                        />
+                    </section>
+
+                    <section className="flex justify-center flex-col items-center">
+                        <h2 className="my-10 text-4xl font-semibold">
                             My Projects
                         </h2>
-                        <div className="card bg-base-300 shadow-xl mt-10 mb-4">
+                        <div className="card bg-base-300 shadow-xl">
                             {/* I need to take the screenshot from my large monitor */}
                             <figure className="h-full">
                                 <img src={NatsiteHero} alt="Natsite Hero" />
@@ -430,7 +496,7 @@ function Mobile() {
                         </div>
                     </section>
                 </main>
-                <footer className="footer footer-center h-28 p-4 bg-base-300 text-base-content mt-8 m-4 ">
+                <footer className="footer footer-center h-28 p-4 bg-base-300 text-base-content">
                     <aside className="text-base">
                         <p>
                             Copyright © 2024 - All right reserved by me, Adam
