@@ -26,6 +26,7 @@ import {
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import GitHubCalendar from "react-github-calendar";
+import { BadgeWIcon } from "./components/BadgeWIcon";
 
 function App() {
     return (
@@ -47,7 +48,7 @@ function Mobile() {
                 <main className="overflow-y-hidden">
                     <section className="flex flex-col justify-around h-screen bg-gradient-to-tl from-slate-900 to-primary-content">
                         <section className="flex items-center justify-center h-[40%]">
-                            <div className="w-[60%] mt-16">
+                            <div className=" mt-16">
                                 <img
                                     className="rounded-ss-[25px] rounded-se-[25px] rounded-es-[25px] rounded-ee-[25px]"
                                     src={Profile}
@@ -156,7 +157,7 @@ function Mobile() {
                         <h2 className="my-10 text-5xl font-Playfair   font-semibold">
                             My Projects
                         </h2>
-                        <div className="card w-3/4 bg-base-300 shadow-xl mt-10 mb-4">
+                        <div className="card bg-base-300 shadow-xl mt-10 mb-4">
                             {/* I need to take the screenshot from my large monitor */}
                             <figure className="h-full">
                                 <img src={NatsiteHero} alt="Natsite Hero" />
@@ -263,7 +264,7 @@ function Mobile() {
                                 </div>
                             </div>
                         </div>
-                        <div className="card w-3/4 bg-base-300 shadow-xl my-4">
+                        <div className="card bg-base-300 shadow-xl my-4">
                             <figure className="">
                                 <img src={AmaviHero} alt="Amavi Hero" />
                             </figure>
@@ -358,7 +359,7 @@ function Mobile() {
                                 </div>
                             </div>
                         </div>
-                        <div className="card w-3/4 bg-base-300 shadow-xl my-4">
+                        <div className="card bg-base-300 shadow-xl my-4">
                             <figure className="">
                                 <img src={MovieHero} alt="Movie Hero" />
                             </figure>
@@ -444,11 +445,6 @@ function Mobile() {
 }
 
 function Desktop() {
-    // const explicitTheme = {
-    //     light: ["#f0f0f0", "#c4edde", "#7ac7c4", "#f73859", "#384259"],
-    //     dark: ["#383838", "#4D455D", "#7DB9B6", "#F5E9CF", "#E96479"],
-    // };
-
     return (
         <div className="hidden lg:flex flex-col h-full">
             <header className="">
@@ -566,52 +562,36 @@ function Desktop() {
                         My Tech Stack
                     </h2>
                     <div className="grid grid-cols-5 gap-4">
-                        <div className="flex flex-col items-center m-4">
+                        <BadgeWIcon name="React">
                             <FaReact size={90} />
-                            <p className="badge badge-neutral mt-2">React</p>
-                        </div>
-                        <div className="flex flex-col items-center m-4">
+                        </BadgeWIcon>
+                        <BadgeWIcon name="Typescript">
                             <SiTypescript size={90} />
-                            <p className="badge badge-neutral mt-2">
-                                Typescript
-                            </p>
-                        </div>
-                        <div className="flex flex-col items-center m-4">
+                        </BadgeWIcon>
+                        <BadgeWIcon name="Node.js">
                             <FaNode size={90} />
-                            <p className="badge badge-neutral mt-2">Node.js</p>
-                        </div>
-                        <div className="flex flex-col items-center m-4">
+                        </BadgeWIcon>
+                        <BadgeWIcon name="PostgreSQL">
                             <BiLogoPostgresql size={90} />
-                            <p className="badge badge-neutral mt-2">
-                                PostgreSQL
-                            </p>
-                        </div>
-                        <div className="flex flex-col items-center m-4">
+                        </BadgeWIcon>
+                        <BadgeWIcon name="Docker">
                             <SiDocker size={90} />
-                            <p className="badge badge-neutral mt-2">Docker</p>
-                        </div>
-                        <div className="flex flex-col items-center m-4">
+                        </BadgeWIcon>
+                        <BadgeWIcon name="Vue.js">
                             <FaVuejs size={90} />
-                            <p className="badge badge-neutral mt-2">Vue.js</p>
-                        </div>
-                        <div className="flex flex-col items-center m-4">
+                        </BadgeWIcon>
+                        <BadgeWIcon name="TailwindCSS">
                             <SiTailwindcss size={90} />
-                            <p className="badge badge-neutral mt-2">
-                                TailwindCSS
-                            </p>
-                        </div>
-                        <div className="flex flex-col items-center m-4">
+                        </BadgeWIcon>
+                        <BadgeWIcon name="Caddy">
                             <SiCaddy size={90} />
-                            <p className="badge badge-neutral mt-2">Caddy</p>
-                        </div>
-                        <div className="flex flex-col items-center m-4">
+                        </BadgeWIcon>
+                        <BadgeWIcon name="Express">
                             <SiExpress size={90} />
-                            <p className="badge badge-neutral mt-2">Express</p>
-                        </div>
-                        <div className="flex flex-col items-center m-4">
+                        </BadgeWIcon>
+                        <BadgeWIcon name="Vite">
                             <SiVite size={90} />
-                            <p className="badge badge-neutral mt-2">Vite</p>
-                        </div>
+                        </BadgeWIcon>
                     </div>
                 </section>
 
@@ -622,16 +602,19 @@ function Desktop() {
                     <GitHubCalendar username="adaoj7" />
                 </section>
 
-                <section className="flex flex-col items-center bg-gradient-to-l from-slate-900 to-primary-content py-12">
-                    <h2 className="mb-10 text-4xl font-semibold">
-                        My Projects
-                    </h2>
-                    <div className="card card-side w-4/5 h-auto bg-base-300 shadow-xl mb-4">
+                <section className="flex flex-col items-center bg-gradient-to-l from-slate-900 to-primary-content py-12 gap-12">
+                    <h2 className="mb-4 text-4xl font-semibold">My Projects</h2>
+                    {/* Nativity Site v2 */}
+                    <div className="card card-side bg-base-300 shadow-xl">
                         {/* I need to take the screenshot from my large monitor */}
-                        <figure className="w-3/4 h-full">
-                            <img src={RefactorHero} alt="Natsite Hero" />
+                        <figure className="">
+                            <img
+                                src={RefactorHero}
+                                alt="Natsite Hero"
+                                className="h-[320px] w-[700px] object-cover object-top"
+                            />
                         </figure>
-                        <div className="card-body w-[20px]">
+                        <div className="card-body w-[400px]">
                             <h2 className="card-title">
                                 Peoria Nativity Festival Site v2
                             </h2>
@@ -662,55 +645,31 @@ function Desktop() {
                                     id="natv2DesktopModal"
                                     className="modal"
                                 >
-                                    <div className="modal-box flex flex-row flex-wrap justify-center [&>*]:flex [&>*]:flex-col [&>*]:items-center [&>*]:justify-center [&>*]:m-3">
-                                        <div className="">
+                                    <div className="modal-box grid grid-cols-4">
+                                        <BadgeWIcon name="React">
                                             <FaReact size={70} />
-                                            <p className="badge badge-neutral">
-                                                React
-                                            </p>
-                                        </div>
-                                        <div className="">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="TailwindCSS">
                                             <SiTailwindcss size={70} />
-                                            <p className="badge badge-neutral">
-                                                TailwindCSS
-                                            </p>
-                                        </div>
-                                        <div className="">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="Node.js">
                                             <FaNode size={70} />
-                                            <p className="badge badge-neutral">
-                                                Node.js
-                                            </p>
-                                        </div>
-                                        <div className="">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="Express">
                                             <SiExpress size={70} />
-                                            <p className="badge badge-neutral">
-                                                Express
-                                            </p>
-                                        </div>
-                                        <div className="">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="PostgreSQL">
                                             <BiLogoPostgresql size={70} />
-                                            <p className="badge badge-neutral">
-                                                PostgreSQL
-                                            </p>
-                                        </div>
-                                        <div className="">
-                                            <SiVite size={70} />
-                                            <p className="badge badge-neutral">
-                                                Vite
-                                            </p>
-                                        </div>
-                                        <div className="">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="Docker">
                                             <SiDocker size={70} />
-                                            <p className="badge badge-neutral">
-                                                Docker
-                                            </p>
-                                        </div>
-                                        <div className="">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="Caddy">
                                             <SiCaddy size={70} />
-                                            <p className="badge badge-neutral">
-                                                Caddy
-                                            </p>
-                                        </div>
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="Vite">
+                                            <SiVite size={70} />
+                                        </BadgeWIcon>
                                     </div>
                                     <form
                                         method="dialog"
@@ -736,12 +695,11 @@ function Desktop() {
                             </div>
                         </div>
                     </div>
-                    <div className="card card-side w-4/5 h-auto bg-base-300 shadow-xl mb-4">
+                    {/* Nativity Site v1 */}
+                    <div className="card card-side bg-base-300 shadow-xl">
                         {/* I need to take the screenshot from my large monitor */}
-                        <figure className="w-3/4 h-full">
-                            <img src={NatsiteHero} alt="Natsite Hero" />
-                        </figure>
-                        <div className="card-body w-[20px]">
+
+                        <div className="card-body w-[400px]">
                             <h2 className="card-title">
                                 Peoria Nativity Festival Site v1
                             </h2>
@@ -752,7 +710,7 @@ function Desktop() {
                                 StripeAPI for secure donations. Go check it out.
                             </p>
 
-                            <div className="card-actions justify-end flex flex-row flex-nowrap">
+                            <div className="card-actions justify-end flex flex-row">
                                 <button
                                     className="btn btn-primary hover:btn-ghost"
                                     onClick={() => {
@@ -772,55 +730,31 @@ function Desktop() {
                                     id="natv1DesktopModal"
                                     className="modal"
                                 >
-                                    <div className="modal-box flex flex-row flex-wrap justify-center w-1/2">
-                                        <div className="flex justify-center items-center flex-col m-3 ">
+                                    <div className="modal-box grid grid-cols-4">
+                                        <BadgeWIcon name="React">
                                             <FaReact size={70} />
-                                            <p className="badge badge-neutral">
-                                                React
-                                            </p>
-                                        </div>
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="TailwindCSS">
                                             <SiTailwindcss size={70} />
-                                            <p className="badge badge-neutral">
-                                                TailwindCSS
-                                            </p>
-                                        </div>
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="Node.js">
                                             <FaNode size={70} />
-                                            <p className="badge badge-neutral">
-                                                Node.js
-                                            </p>
-                                        </div>
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="Express">
                                             <SiExpress size={70} />
-                                            <p className="badge badge-neutral">
-                                                Express
-                                            </p>
-                                        </div>
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="PostgreSQL">
                                             <BiLogoPostgresql size={70} />
-                                            <p className="badge badge-neutral">
-                                                PostgreSQL
-                                            </p>
-                                        </div>
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="Vite">
                                             <SiVite size={70} />
-                                            <p className="badge badge-neutral">
-                                                Vite
-                                            </p>
-                                        </div>
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="AWS EC2">
                                             <FaAws size={70} />
-                                            <p className="badge badge-neutral">
-                                                AWS EC2
-                                            </p>
-                                        </div>
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="Caddy">
                                             <SiCaddy size={70} />
-                                            <p className="badge badge-neutral">
-                                                Caddy
-                                            </p>
-                                        </div>
+                                        </BadgeWIcon>
                                     </div>
                                     <form
                                         method="dialog"
@@ -848,12 +782,24 @@ function Desktop() {
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div className="card card-side w-4/5 h-auto bg-base-300 shadow-xl my-4">
-                        <figure className="w-3/4 h-full">
-                            <img src={AmaviHero} alt="Amavi Hero" />
+                        <figure className="">
+                            <img
+                                src={NatsiteHero}
+                                alt="Natsite Hero"
+                                className="h-[320px] w-[700px] object-cover"
+                            />
                         </figure>
-                        <div className="card-body w-[20px]">
+                    </div>
+                    {/* Amavi Chorale Site */}
+                    <div className="card card-side bg-base-300 shadow-xl">
+                        <figure className="">
+                            <img
+                                src={AmaviHero}
+                                alt="Amavi Hero"
+                                className="h-[320px] w-[700px] object-cover"
+                            />
+                        </figure>
+                        <div className="card-body w-[400px]">
                             <h2 className="card-title">Amavi Chorale Site</h2>
                             <p>
                                 This site enables admins with comprehensive
@@ -882,43 +828,25 @@ function Desktop() {
                                     id="amaviDesktopModal"
                                     className="modal"
                                 >
-                                    <div className="modal-box flex flex-row flex-wrap justify-center">
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                    <div className="modal-box grid grid-cols-4">
+                                        <BadgeWIcon name="React">
                                             <FaReact size={70} />
-                                            <p className="badge badge-neutral">
-                                                React
-                                            </p>
-                                        </div>
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="TailwindCSS">
                                             <SiTailwindcss size={70} />
-                                            <p className="badge badge-neutral">
-                                                TailwindCSS
-                                            </p>
-                                        </div>
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="Node.js">
                                             <FaNode size={70} />
-                                            <p className="badge badge-neutral">
-                                                Node.js
-                                            </p>
-                                        </div>
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="Express">
                                             <SiExpress size={70} />
-                                            <p className="badge badge-neutral">
-                                                Express
-                                            </p>
-                                        </div>
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="PostgreSQL">
                                             <BiLogoPostgresql size={70} />
-                                            <p className="badge badge-neutral">
-                                                PostgreSQL
-                                            </p>
-                                        </div>
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="Vite">
                                             <SiVite size={70} />
-                                            <p className="badge badge-neutral">
-                                                Vite
-                                            </p>
-                                        </div>
+                                        </BadgeWIcon>
                                     </div>
                                     <form
                                         method="dialog"
@@ -937,11 +865,9 @@ function Desktop() {
                             </div>
                         </div>
                     </div>
-                    <div className="card card-side w-4/5 h-auto bg-base-300 shadow-xl my-4">
-                        <figure className="w-3/4 h-full">
-                            <img src={MovieHero} alt="Movie Hero" />
-                        </figure>
-                        <div className="card-body w-[20px]">
+                    {/* Movie Lookup w/ Vue */}
+                    <div className="card card-side bg-base-300 shadow-xl">
+                        <div className="card-body w-[400px]">
                             <h2 className="card-title">Movie Lookup w/ Vue</h2>
                             <p>
                                 Movie lookup using the Movie Database API to
@@ -967,31 +893,19 @@ function Desktop() {
                                     id="movieDesktopModal"
                                     className="modal"
                                 >
-                                    <div className="modal-box flex flex-row flex-wrap justify-center">
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                    <div className="modal-box grid grid-cols-4">
+                                        <BadgeWIcon name="Vue">
                                             <FaVuejs size={70} />
-                                            <p className="badge badge-neutral">
-                                                Vue
-                                            </p>
-                                        </div>
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="Node.js">
                                             <FaNode size={70} />
-                                            <p className="badge badge-neutral">
-                                                Node.js
-                                            </p>
-                                        </div>
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="Express">
                                             <SiExpress size={70} />
-                                            <p className="badge badge-neutral">
-                                                Express
-                                            </p>
-                                        </div>
-                                        <div className="flex justify-center items-center flex-col m-3">
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="Vite">
                                             <SiVite size={70} />
-                                            <p className="badge badge-neutral">
-                                                Vite
-                                            </p>
-                                        </div>
+                                        </BadgeWIcon>
                                     </div>
                                     <form
                                         method="dialog"
@@ -1009,8 +923,16 @@ function Desktop() {
                                 </a>
                             </div>
                         </div>
+                        <figure className="">
+                            <img
+                                src={MovieHero}
+                                alt="Movie Hero"
+                                className="h-[320px] w-[700px] object-cover"
+                            />
+                        </figure>
                     </div>
                 </section>
+
                 <footer className="footer footer-center h-28 p-4 bg-base-300 text-base-content">
                     <aside className="text-base">
                         <p>
