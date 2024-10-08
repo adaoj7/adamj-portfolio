@@ -38,135 +38,121 @@ function App() {
 }
 
 function Mobile() {
-    const selectLastHalfYear = (contributions) => {
-        const currentYear = new Date().getFullYear();
-        const currentMonth = new Date().getMonth();
-        const shownMonths = 6;
-
-        return contributions.filter((activity) => {
-            const date = new Date(activity.date);
-            const monthOfDay = date.getMonth();
-
-            return (
-                date.getFullYear() === currentYear &&
-                monthOfDay > currentMonth - shownMonths &&
-                monthOfDay <= currentMonth
-            );
-        });
-    };
-
     return (
         <>
             {/* Mobile */}
             <div className="lg:hidden flex flex-col h-full">
                 <main className="">
-                    <section className="card bg-gradient-to-tl from-slate-900 to-primary-content">
-                        <figure className="flex m-auto mt-8 size-72">
-                            <img
-                                className="rounded-es-[25px] rounded-ee-[25px]"
-                                src={Profile}
-                            />
-                        </figure>
-                        <div className="card-body top-60">
-                            <div className="flex flex-col font-Playfair">
-                                <h2 className="text-2xl">Hi, I'm Adam</h2>
-                                <div className="italic text-sm">
-                                    (Adao is Adam in Portuguese)
-                                </div>
-                            </div>
-                            <div className="flex flex-col gap-4">
-                                <div className="">
-                                    One day, the semester before I graduated
-                                    from BYU-Idaho, while talking with my wife,
-                                    a feeling hit me really strongly. "I should
-                                    learn to code."
-                                </div>
-                                <div className="">
-                                    The Monday after I got my degree I began a
-                                    coding bootcamp at Devmountain specializing
-                                    in web development. I was not prepared for
-                                    the joy that came into my life as a result.
-                                </div>
-                                <div className="">
-                                    I'm a new father, an avid golfer, a soccer
-                                    player and coach, a Nebraska football fan, a
-                                    hungry learner, and a{" "}
-                                    <span className="italic text-info">
-                                        Front-end Software Engineer
-                                    </span>
-                                </div>
-                            </div>
-
-                            <section className="flex justify-end">
-                                <button
-                                    className="btn btn-info hover:btn-ghost shadow-xl mt-4"
-                                    onClick={() => {
-                                        if (document) {
-                                            (
-                                                document.getElementById(
-                                                    "my_modal_1"
-                                                ) as HTMLFormElement
-                                            ).showModal();
-                                        }
-                                    }}
-                                >
-                                    Click Me!
-                                </button>
-                                <dialog id="my_modal_1" className="modal">
-                                    <div className="modal-box">
-                                        <h3 className="font-bold text-xl">
-                                            Gotcha! Now you have to reach out. I
-                                            don't make the rules.
-                                        </h3>
-                                        {/* <p className="flex justify-center">Don't hesitate to reach out!</p> */}
-                                        <div className="flex justify-center mt-10 flex-row">
-                                            <button
-                                                onClick={() =>
-                                                    (window.location.href =
-                                                        "mailto:adaoj.dev@gmail.com")
-                                                }
-                                                className="flex items-center hover:text-gray-300"
-                                            >
-                                                <img
-                                                    src={MailIcon}
-                                                    className="h-10 mx-5 fill-white"
-                                                    title="Will Open Your Default Email Client"
-                                                />
-                                            </button>
-                                            <a
-                                                href="https://www.linkedin.com/in/adamj7/"
-                                                title="Link to My LinkedIn"
-                                            >
-                                                <img
-                                                    src={LinkedIn}
-                                                    className="h-10 mx-5"
-                                                />
-                                            </a>
-                                            <a
-                                                href="https://github.com/adaoj7"
-                                                title="Link to My GitHub"
-                                            >
-                                                <img
-                                                    src={Github}
-                                                    className="h-10 mx-5"
-                                                />
-                                            </a>
-                                        </div>
-                                        <div className="modal-action">
-                                            <form method="dialog">
-                                                {/* if there is a button in form, it will close the modal */}
-                                                <button className="btn">
-                                                    Close
-                                                </button>
-                                            </form>
-                                        </div>
+                    <section className="bg-gradient-to-tl from-slate-900 to-primary-content">
+                        <div className="card">
+                            <figure className="flex m-auto mt-8 size-72">
+                                <img
+                                    className="rounded-es-[25px] rounded-ee-[25px]"
+                                    src={Profile}
+                                />
+                            </figure>
+                            <div className="card-body top-60">
+                                <div className="flex flex-col font-Playfair">
+                                    <h2 className="text-2xl">Hi, I'm Adam</h2>
+                                    <div className="italic text-sm">
+                                        (Adao is Adam in Portuguese)
                                     </div>
-                                </dialog>
-                            </section>
+                                </div>
+                                <div className="flex flex-col gap-4">
+                                    <div className="">
+                                        One day, the semester before I graduated
+                                        from BYU-Idaho, while talking with my
+                                        wife, a feeling hit me really strongly.
+                                        "I should learn to code."
+                                    </div>
+                                    <div className="">
+                                        The Monday after I got my degree I began
+                                        a coding bootcamp at Devmountain
+                                        specializing in web development. I was
+                                        not prepared for the joy that came into
+                                        my life as a result.
+                                    </div>
+                                    <div className="">
+                                        I'm a new father, an avid golfer, a
+                                        soccer player and coach, a Nebraska
+                                        football fan, a hungry learner, and a{" "}
+                                        <span className="italic text-info">
+                                            Front-end Software Engineer
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <section className="flex justify-end">
+                                    <button
+                                        className="btn btn-info hover:btn-ghost shadow-xl mt-4"
+                                        onClick={() => {
+                                            if (document) {
+                                                (
+                                                    document.getElementById(
+                                                        "my_modal_1"
+                                                    ) as HTMLFormElement
+                                                ).showModal();
+                                            }
+                                        }}
+                                    >
+                                        Click Me!
+                                    </button>
+                                    <dialog id="my_modal_1" className="modal">
+                                        <div className="modal-box">
+                                            <h3 className="font-bold text-xl">
+                                                Gotcha! Now you have to reach
+                                                out. I don't make the rules.
+                                            </h3>
+                                            {/* <p className="flex justify-center">Don't hesitate to reach out!</p> */}
+                                            <div className="flex justify-center mt-10 flex-row">
+                                                <button
+                                                    onClick={() =>
+                                                        (window.location.href =
+                                                            "mailto:adaoj.dev@gmail.com")
+                                                    }
+                                                    className="flex items-center hover:text-gray-300"
+                                                >
+                                                    <img
+                                                        src={MailIcon}
+                                                        className="h-10 mx-5 fill-white"
+                                                        title="Will Open Your Default Email Client"
+                                                    />
+                                                </button>
+                                                <a
+                                                    href="https://www.linkedin.com/in/adamj7/"
+                                                    title="Link to My LinkedIn"
+                                                >
+                                                    <img
+                                                        src={LinkedIn}
+                                                        className="h-10 mx-5"
+                                                    />
+                                                </a>
+                                                <a
+                                                    href="https://github.com/adaoj7"
+                                                    title="Link to My GitHub"
+                                                >
+                                                    <img
+                                                        src={Github}
+                                                        className="h-10 mx-5"
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div className="modal-action">
+                                                <form method="dialog">
+                                                    {/* if there is a button in form, it will close the modal */}
+                                                    <button className="btn">
+                                                        Close
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </dialog>
+                                </section>
+                            </div>
                         </div>
                     </section>
 
-                    <section className="flex flex-col items-center pt-12">
+                    <section className="flex flex-col items-center pt-12 p-4">
                         <h2 className="mb-10 text-4xl font-semibold">
                             My Tech Stack
                         </h2>
@@ -204,18 +190,13 @@ function Mobile() {
                         </div>
                     </section>
 
-                    <section className="px-4 py-12">
-                        <h2 className="flex justify-center mb-10 text-4xl font-semibold">
+                    <section className="flex flex-col justify-center px-4 py-12">
+                        <h2 className="flex justify-center mb-10 text-3xl font-semibold">
                             Github Contributions
                         </h2>
                         <GitHubCalendar
                             username="adaoj7"
                             blockSize={12}
-                            transformData={selectLastHalfYear}
-                            labels={{
-                                totalCount:
-                                    "{{count}} contributions in the last 6 months",
-                            }}
                             hideColorLegend
                         />
                     </section>
