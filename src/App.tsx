@@ -30,7 +30,7 @@ import {
 import { GrGraphQl } from "react-icons/gr";
 import { BiLogoPostgresql } from "react-icons/bi";
 import GitHubCalendar from "react-github-calendar";
-import { BadgeWIcon, BadgeWIconMobile } from "./components/BadgeWIcon";
+import { BadgeWIcon } from "./components/BadgeWIcon";
 
 function App() {
     return (
@@ -161,36 +161,51 @@ function Mobile() {
                             My Tech Stack
                         </h2>
                         <div className="grid grid-cols-3 gap-4">
-                            <BadgeWIconMobile name="React">
-                                <FaReact size={90} />
-                            </BadgeWIconMobile>
-                            <BadgeWIconMobile name="Typescript">
+                            <BadgeWIcon name="Typescript">
                                 <SiTypescript size={90} />
-                            </BadgeWIconMobile>
-                            <BadgeWIconMobile name="Node.js">
-                                <FaNode size={90} />
-                            </BadgeWIconMobile>
-                            <BadgeWIconMobile name="PostgreSQL">
-                                <BiLogoPostgresql size={90} />
-                            </BadgeWIconMobile>
-                            <BadgeWIconMobile name="Docker">
-                                <SiDocker size={90} />
-                            </BadgeWIconMobile>
-                            <BadgeWIconMobile name="Vue.js">
-                                <FaVuejs size={90} />
-                            </BadgeWIconMobile>
-                            <BadgeWIconMobile name="TailwindCSS">
+                            </BadgeWIcon>
+                            <BadgeWIcon name="React">
+                                <FaReact size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="React Router">
+                                <SiReactrouter size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="React Query">
+                                <SiReactquery size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="GraphQL">
+                                <GrGraphQl size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="TailwindCSS">
                                 <SiTailwindcss size={90} />
-                            </BadgeWIconMobile>
-                            <BadgeWIconMobile name="Caddy">
-                                <SiCaddy size={90} />
-                            </BadgeWIconMobile>
-                            <BadgeWIconMobile name="Express">
+                            </BadgeWIcon>
+                            <BadgeWIcon name="Node.js">
+                                <FaNode size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="Express">
                                 <SiExpress size={90} />
-                            </BadgeWIconMobile>
-                            <BadgeWIconMobile name="Vite">
+                            </BadgeWIcon>
+                            <BadgeWIcon name="Vite">
                                 <SiVite size={90} />
-                            </BadgeWIconMobile>
+                            </BadgeWIcon>
+                            <BadgeWIcon name="Vue.js">
+                                <FaVuejs size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="PostgreSQL">
+                                <BiLogoPostgresql size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="Docker">
+                                <SiDocker size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="AWS">
+                                <FaAws size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="Digital Ocean">
+                                <FaDigitalOcean size={90} />
+                            </BadgeWIcon>
+                            <BadgeWIcon name="Caddy">
+                                <SiCaddy size={90} />
+                            </BadgeWIcon>
                         </div>
                     </section>
 
@@ -220,11 +235,11 @@ function Mobile() {
                                     Peoria Nativity Festival Site
                                 </h2>
                                 <p>
-                                    This is a site replacement of a static Wix
-                                    site for the Peoria Nativity Festival. With
-                                    features such as login for volunteer shift
-                                    management and StripeAPI for secure
-                                    donations. Go check it out.
+                                    I am currently working on the refactor of v1
+                                    of the Nativity site. This has been done
+                                    with React using Typescript with TanStack
+                                    Query for data fetching and ReactRouter for
+                                    navigation.
                                 </p>
                                 <div className="card-actions justify-end gap-4 mt-4">
                                     <button
@@ -247,11 +262,17 @@ function Mobile() {
                                         className="modal"
                                     >
                                         <div className="modal-box grid grid-cols-3">
+                                            <BadgeWIcon name="Typescript">
+                                                <SiTypescript size={70} />
+                                            </BadgeWIcon>
                                             <BadgeWIcon name="React">
                                                 <FaReact size={70} />
                                             </BadgeWIcon>
-                                            <BadgeWIcon name="Typescript">
-                                                <SiTypescript size={70} />
+                                            <BadgeWIcon name="React Router">
+                                                <SiReactrouter size={70} />
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="React Query">
+                                                <SiReactquery size={70} />
                                             </BadgeWIcon>
                                             <BadgeWIcon name="TailwindCSS">
                                                 <SiTailwindcss size={70} />
@@ -262,17 +283,20 @@ function Mobile() {
                                             <BadgeWIcon name="Express">
                                                 <SiExpress size={70} />
                                             </BadgeWIcon>
+                                            <BadgeWIcon name="Vite">
+                                                <SiVite size={70} />
+                                            </BadgeWIcon>
                                             <BadgeWIcon name="PostgreSQL">
                                                 <BiLogoPostgresql size={70} />
                                             </BadgeWIcon>
                                             <BadgeWIcon name="Docker">
                                                 <SiDocker size={70} />
                                             </BadgeWIcon>
+                                            <BadgeWIcon name="Digital Ocean">
+                                                <FaDigitalOcean size={70} />
+                                            </BadgeWIcon>
                                             <BadgeWIcon name="Caddy">
                                                 <SiCaddy size={70} />
-                                            </BadgeWIcon>
-                                            <BadgeWIcon name="Vite">
-                                                <SiVite size={70} />
                                             </BadgeWIcon>
                                         </div>
                                         <form
@@ -312,11 +336,12 @@ function Mobile() {
                                     Peoria Nativity Festival Site
                                 </h2>
                                 <p>
-                                    This is a site replacement of a static Wix
-                                    site for the Peoria Nativity Festival. With
-                                    features such as login for volunteer shift
-                                    management and StripeAPI for secure
-                                    donations. Go check it out.
+                                    I worked directly with the Peoria Nativity
+                                    Festival to build them some custom software.
+                                    This included a volunteer signup sheet, a
+                                    login system for volunteers to sign up for
+                                    shifts, and the StripeAPI for secure
+                                    donations.
                                 </p>
                                 <div className="card-actions justify-end gap-4 mt-4">
                                     <button
@@ -339,30 +364,33 @@ function Mobile() {
                                         className="modal"
                                     >
                                         <div className="modal-box grid grid-cols-3">
-                                            <BadgeWIconMobile name="React">
+                                            <BadgeWIcon name="React">
                                                 <FaReact size={70} />
-                                            </BadgeWIconMobile>
-                                            <BadgeWIconMobile name="TailwindCSS">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="React Router">
+                                                <SiReactrouter size={70} />
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="TailwindCSS">
                                                 <SiTailwindcss size={70} />
-                                            </BadgeWIconMobile>
-                                            <BadgeWIconMobile name="Node.js">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="Node.js">
                                                 <FaNode size={70} />
-                                            </BadgeWIconMobile>
-                                            <BadgeWIconMobile name="Express">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="Express">
                                                 <SiExpress size={70} />
-                                            </BadgeWIconMobile>
-                                            <BadgeWIconMobile name="PostgreSQL">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="PostgreSQL">
                                                 <BiLogoPostgresql size={70} />
-                                            </BadgeWIconMobile>
-                                            <BadgeWIconMobile name="Vite">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="Vite">
                                                 <SiVite size={70} />
-                                            </BadgeWIconMobile>
-                                            <BadgeWIconMobile name="AWS EC2">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="AWS EC2">
                                                 <FaAws size={70} />
-                                            </BadgeWIconMobile>
-                                            <BadgeWIconMobile name="Caddy">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="Caddy">
                                                 <SiCaddy size={70} />
-                                            </BadgeWIconMobile>
+                                            </BadgeWIcon>
                                         </div>
                                         <form
                                             method="dialog"
@@ -428,24 +456,24 @@ function Mobile() {
                                         className="modal"
                                     >
                                         <div className="modal-box grid grid-cols-3">
-                                            <BadgeWIconMobile name="React">
+                                            <BadgeWIcon name="React">
                                                 <FaReact size={70} />
-                                            </BadgeWIconMobile>
-                                            <BadgeWIconMobile name="TailwindCSS">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="TailwindCSS">
                                                 <SiTailwindcss size={70} />
-                                            </BadgeWIconMobile>
-                                            <BadgeWIconMobile name="Node.js">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="Node.js">
                                                 <FaNode size={70} />
-                                            </BadgeWIconMobile>
-                                            <BadgeWIconMobile name="Express">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="Express">
                                                 <SiExpress size={70} />
-                                            </BadgeWIconMobile>
-                                            <BadgeWIconMobile name="PostgreSQL">
-                                                <BiLogoPostgresql size={70} />
-                                            </BadgeWIconMobile>
-                                            <BadgeWIconMobile name="Vite">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="Vite">
                                                 <SiVite size={70} />
-                                            </BadgeWIconMobile>
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="PostgreSQL">
+                                                <BiLogoPostgresql size={70} />
+                                            </BadgeWIcon>
                                         </div>
                                         <form
                                             method="dialog"
@@ -498,15 +526,15 @@ function Mobile() {
                                         className="modal"
                                     >
                                         <div className="modal-box grid grid-cols-3">
-                                            <BadgeWIconMobile name="Vue">
+                                            <BadgeWIcon name="Vue">
                                                 <FaVuejs size={70} />
-                                            </BadgeWIconMobile>
-                                            <BadgeWIconMobile name="Node.js">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="Node.js">
                                                 <FaNode size={70} />
-                                            </BadgeWIconMobile>
-                                            <BadgeWIconMobile name="Vite">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="Vite">
                                                 <SiVite size={70} />
-                                            </BadgeWIconMobile>
+                                            </BadgeWIcon>
                                         </div>
                                         <form
                                             method="dialog"
