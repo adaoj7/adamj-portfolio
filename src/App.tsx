@@ -338,10 +338,10 @@ function Mobile() {
                                 <p>
                                     I worked directly with the Peoria Nativity
                                     Festival to build them some custom software.
-                                    This included a volunteer signup sheet, a
-                                    login system for volunteers to sign up for
-                                    shifts, and the StripeAPI for secure
-                                    donations.
+                                    This included a login system for volunteers
+                                    to sign up for shifts, admin features to be
+                                    able to track signups, and the StripeAPI for
+                                    secure donations.
                                 </p>
                                 <div className="card-actions justify-end gap-4 mt-4">
                                     <button
@@ -856,10 +856,12 @@ function Desktop() {
                                 Peoria Nativity Festival Site v1
                             </h2>
                             <p>
-                                This is a site replacement of a static Wix site
-                                for the Peoria Nativity Festival. With features
-                                such as login for volunteer shift management and
-                                StripeAPI for secure donations. Go check it out.
+                                I worked directly with the Peoria Nativity
+                                Festival to build them some custom software.
+                                This included a login system for volunteers to
+                                sign up for shifts, admin features to be able to
+                                track signups, and the StripeAPI for secure
+                                donations.
                             </p>
 
                             <div className="card-actions justify-end flex flex-row">
