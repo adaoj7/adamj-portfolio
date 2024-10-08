@@ -15,6 +15,7 @@ import {
     FaReact,
     FaVuejs,
     FaGithub,
+    FaDigitalOcean,
 } from "react-icons/fa";
 import {
     SiVite,
@@ -23,7 +24,10 @@ import {
     SiTailwindcss,
     SiTypescript,
     SiDocker,
+    SiReactquery,
+    SiReactrouter,
 } from "react-icons/si";
+import { GrGraphQl } from "react-icons/gr";
 import { BiLogoPostgresql } from "react-icons/bi";
 import GitHubCalendar from "react-github-calendar";
 import { BadgeWIcon, BadgeWIconMobile } from "./components/BadgeWIcon";
@@ -655,14 +659,38 @@ function Desktop() {
                         My Tech Stack
                     </h2>
                     <div className="grid grid-cols-5 gap-4">
-                        <BadgeWIcon name="React">
-                            <FaReact size={90} />
-                        </BadgeWIcon>
                         <BadgeWIcon name="Typescript">
                             <SiTypescript size={90} />
                         </BadgeWIcon>
+                        <BadgeWIcon name="React">
+                            <FaReact size={90} />
+                        </BadgeWIcon>
+                        <BadgeWIcon name="React Query">
+                            <SiReactquery size={90} />
+                        </BadgeWIcon>
+                        <BadgeWIcon name="React Router">
+                            <SiReactrouter size={90} />
+                        </BadgeWIcon>
+                        <BadgeWIcon name="GraphQL">
+                            <GrGraphQl size={90} />
+                        </BadgeWIcon>
+                        <BadgeWIcon name="TailwindCSS">
+                            <SiTailwindcss size={90} />
+                        </BadgeWIcon>
                         <BadgeWIcon name="Node.js">
                             <FaNode size={90} />
+                        </BadgeWIcon>
+                        <BadgeWIcon name="Express">
+                            <SiExpress size={90} />
+                        </BadgeWIcon>
+                        <BadgeWIcon name="Vue.js">
+                            <FaVuejs size={90} />
+                        </BadgeWIcon>
+                        <BadgeWIcon name="Vite">
+                            <SiVite size={90} />
+                        </BadgeWIcon>
+                        <BadgeWIcon name="Caddy">
+                            <SiCaddy size={90} />
                         </BadgeWIcon>
                         <BadgeWIcon name="PostgreSQL">
                             <BiLogoPostgresql size={90} />
@@ -670,20 +698,11 @@ function Desktop() {
                         <BadgeWIcon name="Docker">
                             <SiDocker size={90} />
                         </BadgeWIcon>
-                        <BadgeWIcon name="Vue.js">
-                            <FaVuejs size={90} />
+                        <BadgeWIcon name="AWS">
+                            <FaAws size={90} />
                         </BadgeWIcon>
-                        <BadgeWIcon name="TailwindCSS">
-                            <SiTailwindcss size={90} />
-                        </BadgeWIcon>
-                        <BadgeWIcon name="Caddy">
-                            <SiCaddy size={90} />
-                        </BadgeWIcon>
-                        <BadgeWIcon name="Express">
-                            <SiExpress size={90} />
-                        </BadgeWIcon>
-                        <BadgeWIcon name="Vite">
-                            <SiVite size={90} />
+                        <BadgeWIcon name="Digital Ocean">
+                            <FaDigitalOcean size={90} />
                         </BadgeWIcon>
                     </div>
                 </section>
@@ -712,10 +731,10 @@ function Desktop() {
                                 Peoria Nativity Festival Site v2
                             </h2>
                             <p>
-                                This is a site replacement of a static Wix site
-                                for the Peoria Nativity Festival. With features
-                                such as login for volunteer shift management and
-                                StripeAPI for secure donations. Go check it out.
+                                I am currently working on the refactor of v1 of
+                                the Nativity site. This has been done with React
+                                using Typescript with TanStack Query for data
+                                fetching and ReactRouter for navigation.
                             </p>
 
                             <div className="card-actions justify-end flex flex-row flex-nowrap">
@@ -744,6 +763,12 @@ function Desktop() {
                                         </BadgeWIcon>
                                         <BadgeWIcon name="Typescript">
                                             <SiTypescript size={70} />
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="React Router">
+                                            <SiReactrouter size={70} />
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="React Query">
+                                            <SiReactquery size={70} />
                                         </BadgeWIcon>
                                         <BadgeWIcon name="TailwindCSS">
                                             <SiTailwindcss size={70} />
@@ -829,6 +854,9 @@ function Desktop() {
                                     <div className="modal-box grid grid-cols-4">
                                         <BadgeWIcon name="React">
                                             <FaReact size={70} />
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="React Router">
+                                            <SiReactrouter size={70} />
                                         </BadgeWIcon>
                                         <BadgeWIcon name="TailwindCSS">
                                             <SiTailwindcss size={70} />
