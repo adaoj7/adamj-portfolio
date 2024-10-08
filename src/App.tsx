@@ -665,11 +665,11 @@ function Desktop() {
                         <BadgeWIcon name="React">
                             <FaReact size={90} />
                         </BadgeWIcon>
-                        <BadgeWIcon name="React Query">
-                            <SiReactquery size={90} />
-                        </BadgeWIcon>
                         <BadgeWIcon name="React Router">
                             <SiReactrouter size={90} />
+                        </BadgeWIcon>
+                        <BadgeWIcon name="React Query">
+                            <SiReactquery size={90} />
                         </BadgeWIcon>
                         <BadgeWIcon name="GraphQL">
                             <GrGraphQl size={90} />
@@ -689,9 +689,6 @@ function Desktop() {
                         <BadgeWIcon name="Vite">
                             <SiVite size={90} />
                         </BadgeWIcon>
-                        <BadgeWIcon name="Caddy">
-                            <SiCaddy size={90} />
-                        </BadgeWIcon>
                         <BadgeWIcon name="PostgreSQL">
                             <BiLogoPostgresql size={90} />
                         </BadgeWIcon>
@@ -703,6 +700,9 @@ function Desktop() {
                         </BadgeWIcon>
                         <BadgeWIcon name="Digital Ocean">
                             <FaDigitalOcean size={90} />
+                        </BadgeWIcon>
+                        <BadgeWIcon name="Caddy">
+                            <SiCaddy size={90} />
                         </BadgeWIcon>
                     </div>
                 </section>
@@ -758,11 +758,11 @@ function Desktop() {
                                     className="modal"
                                 >
                                     <div className="modal-box grid grid-cols-4">
-                                        <BadgeWIcon name="React">
-                                            <FaReact size={70} />
-                                        </BadgeWIcon>
                                         <BadgeWIcon name="Typescript">
                                             <SiTypescript size={70} />
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="React">
+                                            <FaReact size={70} />
                                         </BadgeWIcon>
                                         <BadgeWIcon name="React Router">
                                             <SiReactrouter size={70} />
@@ -779,17 +779,20 @@ function Desktop() {
                                         <BadgeWIcon name="Express">
                                             <SiExpress size={70} />
                                         </BadgeWIcon>
+                                        <BadgeWIcon name="Vite">
+                                            <SiVite size={70} />
+                                        </BadgeWIcon>
                                         <BadgeWIcon name="PostgreSQL">
                                             <BiLogoPostgresql size={70} />
                                         </BadgeWIcon>
                                         <BadgeWIcon name="Docker">
                                             <SiDocker size={70} />
                                         </BadgeWIcon>
+                                        <BadgeWIcon name="Digital Ocean">
+                                            <FaDigitalOcean size={70} />
+                                        </BadgeWIcon>
                                         <BadgeWIcon name="Caddy">
                                             <SiCaddy size={70} />
-                                        </BadgeWIcon>
-                                        <BadgeWIcon name="Vite">
-                                            <SiVite size={70} />
                                         </BadgeWIcon>
                                     </div>
                                     <form
@@ -867,11 +870,11 @@ function Desktop() {
                                         <BadgeWIcon name="Express">
                                             <SiExpress size={70} />
                                         </BadgeWIcon>
-                                        <BadgeWIcon name="PostgreSQL">
-                                            <BiLogoPostgresql size={70} />
-                                        </BadgeWIcon>
                                         <BadgeWIcon name="Vite">
                                             <SiVite size={70} />
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="PostgreSQL">
+                                            <BiLogoPostgresql size={70} />
                                         </BadgeWIcon>
                                         <BadgeWIcon name="AWS EC2">
                                             <FaAws size={70} />
@@ -965,11 +968,11 @@ function Desktop() {
                                         <BadgeWIcon name="Express">
                                             <SiExpress size={70} />
                                         </BadgeWIcon>
-                                        <BadgeWIcon name="PostgreSQL">
-                                            <BiLogoPostgresql size={70} />
-                                        </BadgeWIcon>
                                         <BadgeWIcon name="Vite">
                                             <SiVite size={70} />
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="PostgreSQL">
+                                            <BiLogoPostgresql size={70} />
                                         </BadgeWIcon>
                                     </div>
                                     <form
