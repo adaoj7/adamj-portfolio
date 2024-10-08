@@ -26,7 +26,7 @@ import {
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import GitHubCalendar from "react-github-calendar";
-import { BadgeWIcon } from "./components/BadgeWIcon";
+import { BadgeWIcon, BadgeWIconMobile } from "./components/BadgeWIcon";
 
 function App() {
     return (
@@ -166,45 +166,45 @@ function Mobile() {
                         </div>
                     </section>
 
-                    <section className="flex flex-col items-center my-12">
+                    <section className="flex flex-col items-center pt-12">
                         <h2 className="mb-10 text-4xl font-semibold">
                             My Tech Stack
                         </h2>
                         <div className="grid grid-cols-3 gap-4">
-                            <BadgeWIcon name="React">
+                            <BadgeWIconMobile name="React">
                                 <FaReact size={90} />
-                            </BadgeWIcon>
-                            <BadgeWIcon name="Typescript">
+                            </BadgeWIconMobile>
+                            <BadgeWIconMobile name="Typescript">
                                 <SiTypescript size={90} />
-                            </BadgeWIcon>
-                            <BadgeWIcon name="Node.js">
+                            </BadgeWIconMobile>
+                            <BadgeWIconMobile name="Node.js">
                                 <FaNode size={90} />
-                            </BadgeWIcon>
-                            <BadgeWIcon name="PostgreSQL">
+                            </BadgeWIconMobile>
+                            <BadgeWIconMobile name="PostgreSQL">
                                 <BiLogoPostgresql size={90} />
-                            </BadgeWIcon>
-                            <BadgeWIcon name="Docker">
+                            </BadgeWIconMobile>
+                            <BadgeWIconMobile name="Docker">
                                 <SiDocker size={90} />
-                            </BadgeWIcon>
-                            <BadgeWIcon name="Vue.js">
+                            </BadgeWIconMobile>
+                            <BadgeWIconMobile name="Vue.js">
                                 <FaVuejs size={90} />
-                            </BadgeWIcon>
-                            <BadgeWIcon name="TailwindCSS">
+                            </BadgeWIconMobile>
+                            <BadgeWIconMobile name="TailwindCSS">
                                 <SiTailwindcss size={90} />
-                            </BadgeWIcon>
-                            <BadgeWIcon name="Caddy">
+                            </BadgeWIconMobile>
+                            <BadgeWIconMobile name="Caddy">
                                 <SiCaddy size={90} />
-                            </BadgeWIcon>
-                            <BadgeWIcon name="Express">
+                            </BadgeWIconMobile>
+                            <BadgeWIconMobile name="Express">
                                 <SiExpress size={90} />
-                            </BadgeWIcon>
-                            <BadgeWIcon name="Vite">
+                            </BadgeWIconMobile>
+                            <BadgeWIconMobile name="Vite">
                                 <SiVite size={90} />
-                            </BadgeWIcon>
+                            </BadgeWIconMobile>
                         </div>
                     </section>
 
-                    <section className="p-4">
+                    <section className="px-4 py-12">
                         <h2 className="flex justify-center mb-10 text-4xl font-semibold">
                             Github Contributions
                         </h2>
@@ -216,31 +216,39 @@ function Mobile() {
                                 totalCount:
                                     "{{count}} contributions in the last 6 months",
                             }}
+                            hideColorLegend
                         />
                     </section>
 
-                    <section className="flex justify-center flex-col items-center">
-                        <h2 className="my-10 text-4xl font-semibold">
+                    <section className="flex justify-center flex-col items-center bg-gradient-to-l from-slate-900 to-primary-content gap-8 p-8">
+                        <h2 className="my-4 text-4xl font-semibold">
                             My Projects
                         </h2>
+                        {/* Nativity Site v2 */}
                         <div className="card bg-base-300 shadow-xl">
                             {/* I need to take the screenshot from my large monitor */}
                             <figure className="h-full">
-                                <img src={NatsiteHero} alt="Natsite Hero" />
+                                <img src={RefactorHero} alt="Natsite Hero" />
                             </figure>
                             <div className="card-body">
                                 <h2 className="card-title">
                                     Peoria Nativity Festival Site
                                 </h2>
-                                <p>This site was build to</p>
-                                <div className="card-actions justify-between flex-row">
+                                <p>
+                                    This is a site replacement of a static Wix
+                                    site for the Peoria Nativity Festival. With
+                                    features such as login for volunteer shift
+                                    management and StripeAPI for secure
+                                    donations. Go check it out.
+                                </p>
+                                <div className="card-actions justify-end gap-4 mt-4">
                                     <button
                                         className="btn btn-primary hover:btn-ghost"
                                         onClick={() => {
                                             if (document) {
                                                 (
                                                     document.getElementById(
-                                                        "natPhoneModal"
+                                                        "natv2PhoneModal"
                                                     ) as HTMLFormElement
                                                 ).showModal();
                                             }
@@ -250,59 +258,37 @@ function Mobile() {
                                         Tech Stack
                                     </button>
                                     <dialog
-                                        id="natPhoneModal"
+                                        id="natv2PhoneModal"
                                         className="modal"
                                     >
-                                        <div className="modal-box flex flex-row flex-wrap justify-center">
-                                            <div className="flex justify-center items-center flex-col m-3">
+                                        <div className="modal-box grid grid-cols-3">
+                                            <BadgeWIcon name="React">
                                                 <FaReact size={70} />
-                                                <p className="badge badge-neutral">
-                                                    React
-                                                </p>
-                                            </div>
-                                            {/* Add Typescript */}
-                                            <div className="flex justify-center items-center flex-col m-3">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="Typescript">
+                                                <SiTypescript size={70} />
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="TailwindCSS">
                                                 <SiTailwindcss size={70} />
-                                                <p className="badge badge-neutral">
-                                                    TailwindCSS
-                                                </p>
-                                            </div>
-                                            <div className="flex justify-center items-center flex-col m-3">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="Node.js">
                                                 <FaNode size={70} />
-                                                <p className="badge badge-neutral">
-                                                    Node.js
-                                                </p>
-                                            </div>
-                                            <div className="flex justify-center items-center flex-col m-3">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="Express">
                                                 <SiExpress size={70} />
-                                                <p className="badge badge-neutral">
-                                                    Express
-                                                </p>
-                                            </div>
-                                            <div className="flex justify-center items-center flex-col m-3">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="PostgreSQL">
                                                 <BiLogoPostgresql size={70} />
-                                                <p className="badge badge-neutral">
-                                                    PostgreSQL
-                                                </p>
-                                            </div>
-                                            <div className="flex justify-center items-center flex-col m-3">
-                                                <SiVite size={70} />
-                                                <p className="badge badge-neutral">
-                                                    Vite
-                                                </p>
-                                            </div>
-                                            <div className="flex justify-center items-center flex-col m-3">
-                                                <FaAws size={70} />
-                                                <p className="badge badge-neutral">
-                                                    AWS EC2
-                                                </p>
-                                            </div>
-                                            <div className="flex justify-center items-center flex-col m-3">
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="Docker">
+                                                <SiDocker size={70} />
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="Caddy">
                                                 <SiCaddy size={70} />
-                                                <p className="badge badge-neutral">
-                                                    Caddy
-                                                </p>
-                                            </div>
+                                            </BadgeWIcon>
+                                            <BadgeWIcon name="Vite">
+                                                <SiVite size={70} />
+                                            </BadgeWIcon>
                                         </div>
                                         <form
                                             method="dialog"
@@ -325,12 +311,102 @@ function Mobile() {
                                         href="https://github.com/adaoj7/nativity_site"
                                         title="GitHub Repo"
                                     >
-                                        <FaGithub size={30} />
+                                        <FaGithub size={45} />
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div className="card bg-base-300 shadow-xl my-4">
+                        {/* Nativity Site v1 */}
+                        <div className="card bg-base-300 shadow-xl">
+                            {/* I need to take the screenshot from my large monitor */}
+                            <figure className="h-full">
+                                <img src={NatsiteHero} alt="Natsite Hero" />
+                            </figure>
+                            <div className="card-body">
+                                <h2 className="card-title">
+                                    Peoria Nativity Festival Site
+                                </h2>
+                                <p>
+                                    This is a site replacement of a static Wix
+                                    site for the Peoria Nativity Festival. With
+                                    features such as login for volunteer shift
+                                    management and StripeAPI for secure
+                                    donations. Go check it out.
+                                </p>
+                                <div className="card-actions justify-end gap-4 mt-4">
+                                    <button
+                                        className="btn btn-primary hover:btn-ghost"
+                                        onClick={() => {
+                                            if (document) {
+                                                (
+                                                    document.getElementById(
+                                                        "natv1PhoneModal"
+                                                    ) as HTMLFormElement
+                                                ).showModal();
+                                            }
+                                        }}
+                                        title="Tech Stack Modal"
+                                    >
+                                        Tech Stack
+                                    </button>
+                                    <dialog
+                                        id="natv1PhoneModal"
+                                        className="modal"
+                                    >
+                                        <div className="modal-box grid grid-cols-3">
+                                            <BadgeWIconMobile name="React">
+                                                <FaReact size={70} />
+                                            </BadgeWIconMobile>
+                                            <BadgeWIconMobile name="TailwindCSS">
+                                                <SiTailwindcss size={70} />
+                                            </BadgeWIconMobile>
+                                            <BadgeWIconMobile name="Node.js">
+                                                <FaNode size={70} />
+                                            </BadgeWIconMobile>
+                                            <BadgeWIconMobile name="Express">
+                                                <SiExpress size={70} />
+                                            </BadgeWIconMobile>
+                                            <BadgeWIconMobile name="PostgreSQL">
+                                                <BiLogoPostgresql size={70} />
+                                            </BadgeWIconMobile>
+                                            <BadgeWIconMobile name="Vite">
+                                                <SiVite size={70} />
+                                            </BadgeWIconMobile>
+                                            <BadgeWIconMobile name="AWS EC2">
+                                                <FaAws size={70} />
+                                            </BadgeWIconMobile>
+                                            <BadgeWIconMobile name="Caddy">
+                                                <SiCaddy size={70} />
+                                            </BadgeWIconMobile>
+                                        </div>
+                                        <form
+                                            method="dialog"
+                                            className="modal-backdrop"
+                                        >
+                                            {/* if there is a button in form, it will close the modal */}
+                                            <button>close</button>
+                                        </form>
+                                    </dialog>
+                                    <button
+                                        className="btn btn-primary hover:btn-ghost text-base"
+                                        onClick={() =>
+                                            (window.location.href =
+                                                "https://adamj-developer.com")
+                                        }
+                                    >
+                                        <FaExternalLinkAlt />
+                                    </button>
+                                    <a
+                                        href="https://github.com/adaoj7/nativity_site"
+                                        title="GitHub Repo"
+                                    >
+                                        <FaGithub size={45} />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        {/* Amavi Chorale Site */}
+                        <div className="card bg-base-300 shadow-xl">
                             <figure className="">
                                 <img src={AmaviHero} alt="Amavi Hero" />
                             </figure>
@@ -346,7 +422,7 @@ function Mobile() {
                                     management, and donations utilizing
                                     StripeAPI.
                                 </p>
-                                <div className="card-actions justify-end flex flex-row">
+                                <div className="card-actions justify-end gap-4 mt-4">
                                     <button
                                         className="btn btn-primary hover:btn-ghost"
                                         onClick={() => {
@@ -366,43 +442,25 @@ function Mobile() {
                                         id="amaviPhoneModal"
                                         className="modal"
                                     >
-                                        <div className="modal-box flex flex-row flex-wrap justify-center">
-                                            <div className="flex justify-center items-center flex-col m-3">
+                                        <div className="modal-box grid grid-cols-3">
+                                            <BadgeWIconMobile name="React">
                                                 <FaReact size={70} />
-                                                <p className="badge badge-neutral">
-                                                    React
-                                                </p>
-                                            </div>
-                                            <div className="flex justify-center items-center flex-col m-3">
+                                            </BadgeWIconMobile>
+                                            <BadgeWIconMobile name="TailwindCSS">
                                                 <SiTailwindcss size={70} />
-                                                <p className="badge badge-neutral">
-                                                    TailwindCSS
-                                                </p>
-                                            </div>
-                                            <div className="flex justify-center items-center flex-col m-3">
+                                            </BadgeWIconMobile>
+                                            <BadgeWIconMobile name="Node.js">
                                                 <FaNode size={70} />
-                                                <p className="badge badge-neutral">
-                                                    Node.js
-                                                </p>
-                                            </div>
-                                            <div className="flex justify-center items-center flex-col m-3">
+                                            </BadgeWIconMobile>
+                                            <BadgeWIconMobile name="Express">
                                                 <SiExpress size={70} />
-                                                <p className="badge badge-neutral">
-                                                    Express
-                                                </p>
-                                            </div>
-                                            <div className="flex justify-center items-center flex-col m-3">
+                                            </BadgeWIconMobile>
+                                            <BadgeWIconMobile name="PostgreSQL">
                                                 <BiLogoPostgresql size={70} />
-                                                <p className="badge badge-neutral">
-                                                    PostgreSQL
-                                                </p>
-                                            </div>
-                                            <div className="flex justify-center items-center flex-col m-3">
+                                            </BadgeWIconMobile>
+                                            <BadgeWIconMobile name="Vite">
                                                 <SiVite size={70} />
-                                                <p className="badge badge-neutral">
-                                                    Vite
-                                                </p>
-                                            </div>
+                                            </BadgeWIconMobile>
                                         </div>
                                         <form
                                             method="dialog"
@@ -416,16 +474,13 @@ function Mobile() {
                                         href="https://github.com/crecendo-coders/amavi-dev"
                                         title="Amavi Chorale Repo"
                                     >
-                                        <img
-                                            src={Github}
-                                            alt="Github Logo"
-                                            className="h-12"
-                                        />
+                                        <FaGithub size={45} />
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div className="card bg-base-300 shadow-xl my-4">
+                        {/* Movie Lookup w/ Vue */}
+                        <div className="card bg-base-300 shadow-xl">
                             <figure className="">
                                 <img src={MovieHero} alt="Movie Hero" />
                             </figure>
@@ -437,7 +492,7 @@ function Mobile() {
                                     Movie lookup using the Movie Database API to
                                     display 10 movies based on what is searched.
                                 </p>
-                                <div className="card-actions justify-end flex flex-row">
+                                <div className="card-actions justify-end gap-4 mt-4">
                                     <button
                                         className="btn btn-primary hover:btn-ghost"
                                         onClick={() => {
@@ -457,25 +512,16 @@ function Mobile() {
                                         id="moviePhoneModal"
                                         className="modal"
                                     >
-                                        <div className="modal-box flex flex-row flex-wrap justify-center">
-                                            <div className="flex justify-center items-center flex-col m-3">
+                                        <div className="modal-box grid grid-cols-3">
+                                            <BadgeWIconMobile name="Vue">
                                                 <FaVuejs size={70} />
-                                                <p className="badge badge-neutral">
-                                                    Vue
-                                                </p>
-                                            </div>
-                                            <div className="flex justify-center items-center flex-col m-3">
+                                            </BadgeWIconMobile>
+                                            <BadgeWIconMobile name="Node.js">
                                                 <FaNode size={70} />
-                                                <p className="badge badge-neutral">
-                                                    Node.js
-                                                </p>
-                                            </div>
-                                            <div className="flex justify-center items-center flex-col m-3">
+                                            </BadgeWIconMobile>
+                                            <BadgeWIconMobile name="Vite">
                                                 <SiVite size={70} />
-                                                <p className="badge badge-neutral">
-                                                    Vite
-                                                </p>
-                                            </div>
+                                            </BadgeWIconMobile>
                                         </div>
                                         <form
                                             method="dialog"
@@ -489,14 +535,14 @@ function Mobile() {
                                         href="https://github.com/adaoj7/nativity_site"
                                         title="GitHub Repo"
                                     >
-                                        <FaGithub size={30} />
+                                        <FaGithub size={45} />
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </section>
                 </main>
-                <footer className="footer footer-center h-28 p-4 bg-base-300 text-base-content">
+                <footer className="footer footer-center h-36 p-4 bg-base-300 text-base-content">
                     <aside className="text-base">
                         <p>
                             Copyright © 2024 - All right reserved by me, Adam
@@ -714,6 +760,9 @@ function Desktop() {
                                     <div className="modal-box grid grid-cols-4">
                                         <BadgeWIcon name="React">
                                             <FaReact size={70} />
+                                        </BadgeWIcon>
+                                        <BadgeWIcon name="Typescript">
+                                            <SiTypescript size={70} />
                                         </BadgeWIcon>
                                         <BadgeWIcon name="TailwindCSS">
                                             <SiTailwindcss size={70} />
