@@ -307,15 +307,12 @@ function Mobile() {
                                             <button>close</button>
                                         </form>
                                     </dialog>
-                                    <button
+                                    <a
                                         className="btn btn-primary hover:btn-ghost text-base"
-                                        onClick={() =>
-                                            (window.location.href =
-                                                "https://adamj-developer.com")
-                                        }
+                                        href="https://pc-fn.org"
                                     >
                                         <FaExternalLinkAlt />
-                                    </button>
+                                    </a>
                                     <a
                                         href="https://github.com/adaoj7/nativity_site"
                                         title="GitHub Repo"
@@ -400,15 +397,12 @@ function Mobile() {
                                             <button>close</button>
                                         </form>
                                     </dialog>
-                                    <button
+                                    <a
                                         className="btn btn-primary hover:btn-ghost text-base"
-                                        onClick={() =>
-                                            (window.location.href =
-                                                "https://adamj-developer.com")
-                                        }
+                                        href="https://adamj-developer.com"
                                     >
                                         <FaExternalLinkAlt />
-                                    </button>
+                                    </a>
                                     <a
                                         href="https://github.com/adaoj7/nativity_site"
                                         title="GitHub Repo"
@@ -921,16 +915,13 @@ function Desktop() {
                                         <button>close</button>
                                     </form>
                                 </dialog>
-                                <button
+                                <a
                                     className="btn btn-primary hover:btn-ghost text-base"
-                                    onClick={() =>
-                                        (window.location.href =
-                                            "https://adamj-developer.com")
-                                    }
+                                    href="https://adamj-developer.com"
                                     title="Link to Nativity Site"
                                 >
                                     <FaExternalLinkAlt />
-                                </button>
+                                </a>
                                 <a
                                     href="https://github.com/adaoj7/nativity_site"
                                     title="Nativity Site Repo"
